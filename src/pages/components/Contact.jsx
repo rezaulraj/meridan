@@ -9,10 +9,10 @@ const Contact = () => {
     >
       <div className="max-w-screen-lg mx-auto overflow-hidden">
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-2">
-          <h1 className="col-span-4 text-xl md:text-5xl text-white font-bold font-poppins tracking-wider md:leading-20">
+          <h1 className="col-span-5 text-xl md:text-5xl text-white font-bold font-poppins tracking-wider md:leading-20">
             Book Your Online Counselling Session
           </h1>
-          <div className="col-span-8">
+          <div className="col-span-7">
             <form className="py-4 px-2 bg-white">
               <label htmlFor="name" className="sr-only">
                 Name

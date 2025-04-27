@@ -49,8 +49,8 @@ const Header = () => {
   };
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="sticky top-0 z-[9999]">
-      <div className="relative px-4 lg:px-8 xl:px-0 max-w-screen-xl mx-auto flex items-center justify-between py-3 md:py-5 bg-white">
+    <div className="sticky top-0 z-[9999] bg-white">
+      <div className="relative px-4 lg:px-8 xl:px-0 max-w-screen-xl mx-auto flex items-center justify-between py-3 md:py-5">
         <Link to="/">
           <img src={Logo} className="h-16" alt="Company Logo" />
         </Link>
@@ -126,7 +126,7 @@ const Header = () => {
           </div>
         </div>
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center space-x-4">
+        <div className="md:hidden flex items-center space-x-4 transition-transform duration-500">
           <Link
             className={`font-poppins text-[26px] transition-colors text-blue-dark hover:text-blue-dark/80`}
           >
@@ -202,7 +202,7 @@ const Header = () => {
         )}
       </div>
       <div className="bg-blue-dark w-full">
-        <InfinityTextSlider/>
+        <InfinityTextSlider />
       </div>
     </div>
   );
