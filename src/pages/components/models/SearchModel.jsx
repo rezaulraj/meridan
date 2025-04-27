@@ -87,7 +87,7 @@ const SearchModel = ({ setSearchOpen }) => {
           {/* Tabs Content */}
           <div className="max-w-screen-lg ">
             {activeTab === "tab1" && (
-              <div className="w-full flex items-center gap-4 bg-white font-poppins p-4">
+              <div className="w-full md:flex items-center gap-4 space-y-2 bg-white font-poppins p-4">
                 <div>
                   <label htmlFor="" className="sr-only">
                     Select study level
@@ -95,7 +95,7 @@ const SearchModel = ({ setSearchOpen }) => {
                   <select
                     name=""
                     id=""
-                    className="border border-gray-200 rounded-md h-12 md:w-90 px-2 text-lg py-1  text-black focus:outline-none"
+                    className="border border-gray-200 rounded-md h-12 w-full md:w-90 px-2 text-lg py-1  text-black focus:outline-none"
                   >
                     <option className="px-4">Select study level</option>
                     <option value="undergraduate">Undergraduate</option>
@@ -107,7 +107,7 @@ const SearchModel = ({ setSearchOpen }) => {
                 <div className="">
                   <input
                     type="text"
-                    className="border border-gray-200 rounded-md h-12 md:w-90 px-2 text-lg py-1 text-black focus:outline-none"
+                    className="border border-gray-200 rounded-md h-12 w-full md:w-90 px-2 text-lg py-1 text-black focus:outline-none"
                     placeholder="search here..."
                   />
                 </div>
@@ -117,11 +117,11 @@ const SearchModel = ({ setSearchOpen }) => {
               </div>
             )}
             {activeTab === "tab2" && (
-              <div className="w-full flex items-center gap-4 bg-white font-poppins p-4">
+              <div className="w-full md:flex items-center gap-4 space-y-2 bg-white font-poppins p-4">
                 <div className="">
                   <input
                     type="text"
-                    className="border border-gray-200 rounded-md h-12 md:w-[730px] px-2 text-lg py-1 text-black focus:outline-none"
+                    className="border border-gray-200 rounded-md h-12 w-full md:w-[730px] px-2 text-lg py-1 text-black focus:outline-none"
                     placeholder="search here..."
                   />
                 </div>
@@ -131,11 +131,11 @@ const SearchModel = ({ setSearchOpen }) => {
               </div>
             )}
             {activeTab === "tab3" && (
-              <div className="w-full flex items-center gap-4 bg-white font-poppins p-4">
+              <div className="w-full md:flex items-center gap-4 space-y-2 bg-white font-poppins p-4">
                 <div className="">
                   <input
                     type="text"
-                    className="border border-gray-200 rounded-md h-12 md:w-[730px] px-2 text-lg py-1 text-black focus:outline-none"
+                    className="border border-gray-200 rounded-md h-12 w-full md:w-[730px] px-2 text-lg py-1 text-black focus:outline-none"
                     placeholder="search here..."
                   />
                 </div>
@@ -145,11 +145,11 @@ const SearchModel = ({ setSearchOpen }) => {
               </div>
             )}
             {activeTab === "tab4" && (
-              <div className="w-full flex items-center gap-4 bg-white font-poppins p-4">
+              <div className="w-full md:flex items-center gap-4 space-y-2 bg-white font-poppins p-4">
                 <div className="">
                   <input
                     type="text"
-                    className="border border-gray-200 rounded-md h-12 md:w-[730px] px-2 text-lg py-1 text-black focus:outline-none"
+                    className="border border-gray-200 rounded-md h-12 w-full md:w-[730px] px-2 text-lg py-1 text-black focus:outline-none"
                     placeholder="search here..."
                   />
                 </div>
