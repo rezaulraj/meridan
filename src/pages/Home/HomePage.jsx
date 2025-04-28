@@ -84,11 +84,13 @@ const HomePage = () => {
               education together!
             </p>
 
-            <ul className="space-y-3">
+            <ul
+              className="space-y-3 p-4 marker:text-blue-dark"
+              style={{ listStyle: "square" }}
+            >
               {lists.map((list, inx) => (
                 <li key={inx} className="space-y-3">
-                  <span className="flex gap-4 font-poppins ">
-                    <FaCheck className="text-blue-dark size-5" />
+                  <span className="flex gap-4 font-poppins text-lg text-gray-800 marker:text-blue-dark">
                     {list.list}
                   </span>
                 </li>
@@ -103,12 +105,12 @@ const HomePage = () => {
       >
         <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
           <div className="text-center">
-            <h3 className="text-4xl sm:text-5xl font-semibold font-oswald leading-15 tracking-wider  text-blue-dark">
+            <h3 className="text-4xl sm:text-5xl font-semibold font-oswald leading-15 tracking-wider uppercase text-blue-dark">
               Our Customers Are Always Happy
             </h3>
           </div>
           <div className="mt-12">
-            <ul className="flex flex-col items-center justify-center gap-y-10 sm:flex-row sm:flex-wrap">
+            <ul className="grid grid-cols-2 md:grid-cols-4 items-center justify-center gap-y-10 ">
               {stats.map((item, idx) => (
                 <li key={idx} className="text-center px-12 md:px-16">
                   <h4 className="text-5xl text-blue-dark font-oswald font-bold">
