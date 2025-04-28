@@ -15,7 +15,7 @@ const Header = () => {
   const navItems = [
     {
       label: "Home",
-      link: "/home",
+      link: "/",
     },
     {
       label: "Services",
@@ -60,7 +60,7 @@ const Header = () => {
             {navItems.map((item, idx) => (
               <li key={idx}>
                 <Link
-                  to={item.path}
+                  to={item.link}
                   className={`font-medium font-poppins text-[16px] flex items-center space-x-2 transition-colors text-blue-dark hover:text-blue-dark/80`}
                 >
                   {item.label}
@@ -97,20 +97,14 @@ const Header = () => {
                 </span>
                 <div className="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-white border-2 shadow-lg opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300">
                   <div className="py-1 divide-y divide-gray-200">
-                    <a
-                      href="#"
-                      className="flex items-center space-x-3 px-4 py-2 text-[16px] font-medium font-poppins hover:bg-gray-100"
-                    >
+                    <Link className="flex items-center space-x-3 px-4 py-2 text-[16px] font-medium font-poppins hover:bg-gray-100">
                       <img src={student} alt="" className="size-8" />
                       <span>Student</span>
-                    </a>
-                    <a
-                      href="#"
-                      className="flex items-center space-x-3 px-4 py-2 text-[16px] font-medium font-poppins hover:bg-gray-100"
-                    >
+                    </Link>
+                    <Link className="flex items-center space-x-3 px-4 py-2 text-[16px] font-medium font-poppins hover:bg-gray-100">
                       <img src={instution} alt="" className="size-8" />
                       <span>Institution</span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </Link>
@@ -186,7 +180,7 @@ const Header = () => {
                     {navItems.map((item, idx) => (
                       <li key={idx}>
                         <Link
-                          to={item.path}
+                          to={item.link}
                           className="block px-4 py-2 text-lg font-medium text-blue-dark rounded-lg transition-colors"
                           onClick={() => setIsMenuOpen(false)}
                         >
