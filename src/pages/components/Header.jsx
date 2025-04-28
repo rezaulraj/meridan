@@ -76,7 +76,7 @@ const Header = () => {
             onClick={IsContactButtonOpen}
             className="flex items-center gap-x-2 bg-blue-dark hover:scale-105 hover:bg-blue-dark/70 transition-transform duration-500 text-white text-[16px] md:text-[20px] font-poppins py-3 px-5"
           >
-            Book Free Session <FaArrowRight />
+            Book Free Consultation <FaArrowRight />
           </button>
 
           {contactOpen && <ContactModel setContactOpen={setContactOpen} />}

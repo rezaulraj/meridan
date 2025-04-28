@@ -4,6 +4,7 @@ import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
+  FaLocationDot,
   FaPhoneVolume,
   FaPinterest,
   FaQuora,
@@ -12,6 +13,7 @@ import {
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { IoMail } from "react-icons/io5";
+import { RiWhatsappFill } from "react-icons/ri";
 const ContactUs = () => {
   return (
     <div className="py-8 border-b border-gray-50 max-w-screen-xl mx-auto">
@@ -31,16 +33,25 @@ const ContactUs = () => {
         <div className="col-span-2 flex flex-col gap-3 p-2">
           <h2 className="font-poppins font-medium text-xl">Contact Us</h2>
           <Link className="hover:text-blue-400 text-gray-700 font-poppins transition-colors duration-200">
-            Plot no 7, Vaishali Marg, Ganga Sagar-B, Vaishali Nagar, Jaipur,
-            Rajasthan 302021
+            Aladdin Group - UK AI Education Specialists
+          </Link>
+          <Link className="flex items-center gap-2 hover:text-blue-400 text-gray-700 font-poppins transition-colors duration-200 cursor-pointer">
+            <FaLocationDot className="" />
+            <p className="font-poppins">
+              23 Basedale Road, Dagenham, Essex RM9 4QA
+            </p>
           </Link>
           <Link className="flex items-center gap-2 hover:text-blue-400 text-gray-700 font-poppins transition-colors duration-200 cursor-pointer">
             <FaPhoneVolume className="rotate-42 " />
-            <p className="font-poppins">1800 1230 00011 (Toll Free)</p>
+            <p className="font-poppins">+44 7943 642473 (UK Office)</p>
+          </Link>
+          <Link className="flex items-center gap-2 hover:text-blue-400 text-gray-700 font-poppins transition-colors duration-200 cursor-pointer">
+            <RiWhatsappFill />
+            <p className="font-poppins">WhatsApp: +44 7943 642473</p>
           </Link>
           <Link className="flex items-center gap-2 hover:text-blue-400 text-gray-700 font-poppins transition-colors duration-200 cursor-pointer">
             <IoMail className=" " />
-            <p className="font-poppins">application02@meridean.org</p>
+            <p className="font-poppins">admissions@aladdingroup.co.uk</p>
           </Link>
         </div>
         <div className="col-span-1 flex flex-col gap-3 p-2">

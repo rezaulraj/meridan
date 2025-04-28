@@ -12,11 +12,11 @@ const Courses = () => {
       link: "#highlights",
     },
     {
-      title: "Why Study Artificial Intelligence Courses Abroad?",
+      title: "Why Study Artificial Intelligence Courses in the UK?",
       link: "#study",
     },
     {
-      title: "Artificial Intelligence Courses Eligibility in Abroad",
+      title: "Entry Requirements for AI Programs in the UK",
       link: "#eligibility",
     },
     {
@@ -24,7 +24,7 @@ const Courses = () => {
       link: "#universities",
     },
     {
-      title: "List of Artificial Intelligence Courses in Abroad",
+      title: "List of Artificial Intelligence Courses in the UK",
       link: "#list",
     },
     {
@@ -32,19 +32,19 @@ const Courses = () => {
       link: "#living",
     },
     {
-      title: "Student Visa Cost for Artificial Intelligence Courses",
+      title: "Student Visa Cost for Artificial Intelligence Courses in the UK",
       link: "#visa",
     },
     {
-      title: "Scholarships for Artificial Intelligence Courses Abroad",
+      title: "Scholarships for Artificial Intelligence Courses in the UK",
       link: "#scholarships",
     },
     {
-      title: "Salary after Artificial Intelligence Courses Abroad",
+      title: "Salary after Artificial Intelligence Courses in the UK",
       link: "#salary",
     },
     {
-      title: "Conclusion",
+      title: "Final Considerations",
       link: "#conclusion",
     },
     {
@@ -59,169 +59,118 @@ const Courses = () => {
       statistic: "Artificial Intelligence (AI)",
     },
     {
-      particular: "Total number of AI Course Universities	",
-      statistic: "290+",
+      particular: "Total AI Course Universities",
+      statistic: "50+ in UK",
     },
     {
-      particular: "Top positions after AI Course",
+      particular: "Top Careers After AI",
       statistic:
-        "AI engineer, Robotics scientist, Data scientist, Data analyst, User experience researcher, Information architect",
+        "AI Engineer, Robotics Scientist, Machine Learning Specialist, Data Scientist, NLP Researcher",
     },
     {
-      particular: "Exams required",
-      statistic: "IELTS, PTE, TOEFL, Duolingo, GRE, GMAT",
+      particular: "Exams Required",
+      statistic: "IELTS, PTE, TOEFL, Duolingo (UKVI-approved)",
     },
     {
-      particular:
-        "Average Visa Cost for Artificial Intelligence Courses Abroad",
-      statistic: "Depending on the Country",
+      particular: "Average UK Visa Cost",
+      statistic: "£363 (Student Visa) + £490/year (IHS Surcharge)",
     },
     {
       particular: "Scholarships",
       statistic:
-        "The DeepMind Scholarship, Dean Benson Scholarship, Regional Victoria Experience Bursary, Vector Scholarship in Artificial Intelligence, The Professor Mike Walker OBE Scholarship",
+        "Chevening Scholarships, GREAT Scholarships, Commonwealth Scholarships, University-specific AI bursaries",
     },
     {
-      particular: "Top Universities by Ranking",
+      particular: "Top UK Universities",
       statistic:
-        "University of Alberta, University of Newcastle, University of Sussex, Curtin University, La Trobe University",
+        "University of Cambridge, University of Oxford, Imperial College London, University of Edinburgh, UCL",
     },
   ];
 
   const aiRankingUnivercity = [
     {
-      univercity: "Massachusetts Institute of Technology (MIT)",
-      country: "Cambridge, United States",
-      quRank: "1",
-    },
-    {
       univercity: "University of Cambridge",
-      country: "Cambridge, United States",
-      quRank: "2",
-      link: true,
+      program: "MPhil in Machine Learning and Machine Intelligence",
+      duration: "11 months",
+      free: "£32,405",
     },
     {
       univercity: "University of Oxford",
-      country: "Oxford, United Kingdom",
-      quRank: "3",
-      link: true,
+      program: "MSc in Advanced Computer Science (AI specialisation)",
+      duration: "11 months",
+      free: "£32,405",
     },
     {
-      univercity: "Harvard University",
-      country: "Cambridge, United States",
-      quRank: "4",
+      univercity: "University of Oxford",
+      program: "Oxford, United Kingdom",
+      duration: "1 year",
+      free: "Varies",
     },
     {
-      univercity: "Stanford University",
-      country: "Stanford, United States",
-      quRank: "5",
-      link: true,
+      univercity: "University College London (UCL)",
+      program: "Robotics and Artificial Intelligence MEng",
+      duration: "4 years",
+      free: "£38,300",
     },
     {
-      univercity: "Imperial College London",
-      country: "London, United Kingdom",
-      quRank: "6",
+      univercity: "University of Edinburgh",
+      program: "MSc Artificial Intelligence; BSc Artificial Intelligence",
+      duration: "1-4 years",
+      free: "£32,200 (BSc)",
     },
     {
-      univercity: "University of California, Berkeley (UCB)",
-      country: "Berkeley, United States",
-      quRank: "10",
+      univercity: "University of Manchester",
+      program: "MSc Artificial Intelligence",
+      duration: "1 year",
+      free: "Varies",
+    },
+
+    {
+      univercity: "University of St Andrews",
+      program: "MSc Artificial Intelligence",
+      duration: "1 year",
+      free: "Varies",
     },
     {
-      univercity: "Princeton University",
-      country: "Princeton, United States",
-      quRank: "17",
+      univercity: "City, University of London",
+      program: "MSc Artificial Intelligence",
+      duration: "1 year",
+      free: "Varies",
     },
     {
-      univercity: "The University of New South Wales (UNSW Sydney)",
-      country: "Sydney, Australia",
-      quRank: "19",
-      link: true,
+      univercity: "University of Sheffield",
+      program: "BSc Computer Science (Artificial Intelligence)",
+      duration: "3 years",
+      free: "£26,950",
     },
     {
-      univercity: "University of Toronto",
-      country: "Toronto, Canada",
-      quRank: "21",
-      link: true,
+      univercity: "Queen Mary University of London",
+      program: "BSc/MSc in Computer Science and Artificial Intelligence",
+      duration: "3-4 years",
+      free: "£26,250–£28,950",
     },
   ];
 
   const quRankingSub = [
     {
-      univercity: "Massachusetts Institute of Technology (MIT)",
-      country: "Cambridge, United States",
-      quRank: "1",
-    },
-    {
-      univercity: "Stanford University",
-      country: "Stanford, United States",
-      quRank: "2",
-    },
-    {
       univercity: "University of Cambridge",
-      country: "Cambridge, United Kingdom",
+      country: "Cambridge, UK",
       quRank: "3",
     },
     {
       univercity: "University of Oxford",
-      country: "Oxford, United Kingdom",
+      country: "Oxford, UK",
       quRank: "4",
     },
     {
-      univercity: "University of California, Berkeley (UCB)",
-      country: "Berkeley, United States",
-      quRank: "5",
-    },
-    {
       univercity: "Imperial College London",
-      country: "London, United Kingdom",
+      country: "London, UK",
       quRank: "6",
     },
     {
-      univercity: "Harvard University",
-      country: "Cambridge, United States",
-      quRank: "8",
-    },
-    {
-      univercity: "Politecnico di Milano",
-      country: "Milan, Italy",
-      quRank: "18",
-    },
-    {
-      univercity: "University of Toronto",
-      country: "Toronto, Canada",
-      quRank: "27",
-    },
-    {
-      univercity: "Technical University of Munich",
-      country: "Munich, Germany",
-      quRank: "28",
-    },
-    {
       univercity: "The University of Manchester",
-      country: "Manchester, United Kingdom",
+      country: "Manchester, UK",
       quRank: "32",
-    },
-    {
-      univercity: "University of British Columbia",
-      country: "Vancouver, Canada",
-      quRank: "33",
-      link: true,
-    },
-    {
-      univercity: "Princeton University",
-      country: "Princeton, United States",
-      quRank: "34",
-    },
-    {
-      univercity: "University of Waterloo",
-      country: "Waterloo, Canada",
-      quRank: "37",
-    },
-    {
-      univercity: "McGill University",
-      country: "Montreal, Canada",
-      quRank: "41",
     },
   ];
 
@@ -230,46 +179,31 @@ const Courses = () => {
       list: "Human-Computer Interaction",
     },
     {
-      list: "Artificial Intelligence",
+      list: "Machine Learning & Autonomous Systems",
     },
     {
-      list: "Control, Automation and Artificial Intelligence (with Work Placement)",
+      list: "AI & Computer Science",
     },
     {
-      list: "Human-Centred Interactive Technologies",
+      list: "AI & Data Science",
     },
     {
-      list: "Artificial Intelligence and Computer Science",
+      list: "Control Systems & AI (with Industry Placements)",
     },
     {
-      list: "Artificial Intelligence and Data Science",
+      list: "Ethical AI & Biosciences",
     },
     {
-      list: "Machine Learning and Autonomous Systems",
+      list: "Human-Centred Big Data",
     },
     {
-      list: "Machine Intelligence",
-    },
-    {
-      list: "Artificial Intelligence in the Biosciences",
-    },
-    {
-      list: "Research in Human-Computer Interaction",
-    },
-    {
-      list: "Financial Investigation and Digital Intelligence",
-    },
-    {
-      list: "Human-Centred Big Data and Artificial Intelligence",
+      list: "Financial Intelligence & AI",
     },
   ];
 
   const scholarship = [
     {
       list: "The DeepMind Scholarship",
-    },
-    {
-      list: "Master's Scholarships - Meteorology and Climate",
     },
     {
       list: "Dean Benson Scholarship",
@@ -280,26 +214,31 @@ const Courses = () => {
     {
       list: "Manju Mehrotra Scholarship",
     },
+
     {
       list: "Aziz Foundation Scholarship",
     },
-    {
-      list: "HDR Scholarship - Identifying skills needed to work collaboratively",
-    },
-    {
-      list: "Regional Victoria Experience Bursary",
-    },
+
     {
       list: "Cardiff India scholarships",
     },
+  ];
+
+  const criteria = [
     {
-      list: "La Trobe South Asia Scholarship",
+      list: " Eligibility criteria",
     },
     {
-      list: "Waterloo AI Institute Graduate Scholarship",
+      list: "Top AI courses & specializations",
     },
     {
-      list: "Vector Scholarship in Artificial Intelligence",
+      list: "Tuition fees & scholarships",
+    },
+    {
+      list: "Best universities for AI",
+    },
+    {
+      list: "Career prospects & salaries",
     },
   ];
 
@@ -367,7 +306,7 @@ const Courses = () => {
           <div className=" flex-1">
             <div className="sticky top-4 p-4 space-y-8">
               <h1 className="text-2xl md:text-4xl font-bold text-blue-dark font-poppins">
-                Artificial Intelligence Course Abroad
+                International Artificial Intelligence Education Programs
               </h1>
               <img src={AI} alt="" />
               {/* part one */}
@@ -379,29 +318,38 @@ const Courses = () => {
               </div>
               <div className="space-y-3">
                 <p className="text-lg text-gray-800 font-poppins">
-                  Artificial Intelligence (AI) has become a phenomenal field
-                  with the potential to transform many sectors completely. As
-                  the need for AI experts grows, taking Artificial Intelligence
-                  courses abroad has become a desirable option for students
-                  looking for top-notch education and exposure to different
-                  cultures.
+                  Artificial Intelligence (AI) has emerged as a revolutionary
+                  field with the power to transform industries worldwide. As
+                  demand for skilled AI professionals surges, pursuing
+                  Artificial Intelligence courses abroad has become a top choice
+                  for students seeking world-class education and global
+                  exposure.
                 </p>
                 <p className="text-lg text-gray-800 font-poppins">
-                  Studying AI courses abroad provides students with
-                  opportunities for successful employment. The study of AI
-                  courses after the 12th is a resource of technological
-                  innovations and a worldwide network of renowned institutions.
+                  Studying AI abroad opens doors to lucrative career
+                  opportunities, cutting-edge research, and access to
+                  prestigious institutions. Whether you're looking for AI
+                  courses after 12th or advanced specializations, international
+                  education provides unparalleled advantages in this
+                  fast-growing field.
                 </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  This article covers the main features of studying Artificial
-                  Intelligence abroad, along with prerequisites, Artificial
-                  Intelligence courses, cost, universities, and potential
-                  income.
+                <p className="text-xl text-gray-800 font-poppins font-semibold">
+                  This guide explores everything you need to know about studying
+                  Artificial Intelligence abroad, including:
                 </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  Let's get started about an artificial intelligence course if
-                  you wish to pursue a career in it.
-                </p>
+                <div>
+                  <ul className="space-y-2 px-4">
+                    {criteria.map((list, idx) => (
+                      <li
+                        key={idx}
+                        className="font-poppins text-lg text-gray-800 flex"
+                      >
+                        <span className="text-blue-dark pr-2">✔</span>{" "}
+                        {list.list}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
               {/* part two */}
@@ -410,14 +358,13 @@ const Courses = () => {
                   id="highlights"
                   className="text-blue-dark text-xl md:text-3xl font-bold font-poppins"
                 >
-                  Artificial Intelligence Courses in Abroad - Important
-                  Highlights
+                  Global Opportunities in AI Education
                 </h1>
                 <div className="w-40 h-1 mt-2 bg-red-primary" />
               </div>
               <div className="space-y-3">
                 <p className="text-lg text-gray-800 font-poppins">
-                  There are 290+ universities abroad that offer Artificial
+                  There are 150+ universities abroad that offer Artificial
                   Intelligence courses. These universities do not have any
                   specific requirements except common criteria.
                 </p>
@@ -439,7 +386,7 @@ const Courses = () => {
                           Particulars
                         </th>
                         <th className="py-3 px-6 font-poppins font-bold">
-                          Statistics
+                          Statistics (UK Focus)
                         </th>
                       </tr>
                     </thead>
@@ -465,58 +412,52 @@ const Courses = () => {
                   id="study"
                   className="text-blue-dark text-xl md:text-3xl font-bold font-poppins"
                 >
-                  Why Study Artificial Intelligence Courses Abroad?
+                  Why Study Artificial Intelligence Courses in the UK?
                 </h1>
                 <div className="w-40 h-1 mt-2 bg-red-primary" />
               </div>
               <div className="space-y-3">
                 <p className="text-lg text-gray-800 font-poppins">
-                  Studying artificial intelligence courses abroad offers
-                  numerous advantages for aspiring AI professionals. Here are
-                  some compelling reasons why pursuing AI courses after 12th in
-                  foreign countries can be an excellent choice.
+                  Enrolling in artificial intelligence programs abroad provides
+                  significant benefits for future AI specialists. Below are key
+                  reasons why undertaking AI studies after 12th grade in
+                  international destinations is a strategic decision.
                 </p>
                 <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700">
-                    Global Reputation:
+                  <span className="font-bold text-gray-700 pr-1">
+                    Academic Excellence:
                   </span>
-                  An international reputation for AI research and education has
-                  allowed many prestigious universities around the world to
-                  establish themselves as leaders in this field. By enrolling in
-                  one of the top institutions for AI Courses, students will have
-                  the opportunity to study with renowned professors, engage in
-                  cutting-edge research, and gain exposure to advanced
-                  technologies and techniques.
+                  Leading UK universities are globally recognized for their AI
+                  innovation and teaching standards. Partnering with Aladdin
+                  Group, students gain access to world-class faculty,
+                  participate in groundbreaking research, and utilize
+                  state-of-the-art methodologies.
                 </p>
                 <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700">
-                    Modern Infrastructure:
+                  <span className="font-bold text-gray-700 pr-1">
+                    Advanced Facilities:
                   </span>
-                  Universities abroad frequently have modern infrastructure,
-                  such as specialised AI research laboratories, cutting-edge
-                  computer resources, and access to industrial collaborations.
-                  These tools improve education and allow students to work on
-                  actual AI projects.
+                  UK institutions often feature specialized AI labs,
+                  high-performance computing systems, and industry partnerships.
+                  These resources elevate learning experiences and enable
+                  hands-on work with real-world AI applications.
                 </p>
                 <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700">
-                    Expanded Professional Possibilities:
+                  <span className="font-bold text-gray-700 pr-1">
+                    Career Advancement:
                   </span>
-                  Earning an AI course from a reputable foreign university can
-                  greatly improve professional opportunities. Studying abroad
-                  gives up a global network of chances, enabling graduates to
-                  work with top AI businesses throughout the world. Employers
-                  prefer applicants with foreign experience.
+                  Obtaining an AI qualification from a top UK university expands
+                  job prospects. Graduates develop a competitive edge, accessing
+                  global networks and opportunities with leading AI
+                  organizations that prioritize UK-trained professionals.
                 </p>
                 <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700">
-                    Exposure to Diverse Perspectives:
+                  <span className="font-bold text-gray-700 pr-1">
+                    Innovative Learning Environments:
                   </span>{" "}
-                  Since AI is a constantly developing science, various nations
-                  may have different perspectives and areas of interest for
-                  their study. Students might improve their knowledge and
-                  abilities by studying abroad since they are exposed to various
-                  approaches, theories, and views.
+                  The UK’s dynamic AI landscape exposes students to diverse
+                  methodologies and emerging trends, fostering adaptable
+                  problem-solving skills and cross-disciplinary expertise.
                 </p>
               </div>
 
@@ -526,50 +467,37 @@ const Courses = () => {
                   id="eligibility"
                   className="text-blue-dark text-xl md:text-3xl font-bold font-poppins"
                 >
-                  Artificial Intelligence Courses Eligibility in Abroad
+                  Entry Requirements for AI Programs in the UK
                 </h1>
                 <div className="w-40 h-1 mt-2 bg-red-primary" />
               </div>
               <div className="space-y-3">
                 <p className="text-lg text-gray-800 font-poppins">
-                  The Artificial Intelligence Courses Eligibility in abroad may
-                  change based on the nation and institution. However, there are
-                  certain universal requirements for pursuing AI studies abroad:
+                  The eligibility criteria for Artificial Intelligence Courses
+                  in the UK may vary by institution. However, there are certain
+                  universal requirements for pursuing AI studies:
                 </p>
                 <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700">
+                  <span className="font-bold text-gray-700 pr-1">
                     Educational Background:
                   </span>
-                  A 12th-grade and a bachelor's degree in a relevant subject,
-                  such as computer science, engineering, mathematics, or
-                  statistics, are often prerequisites for admission in AI
-                  Courses. If a student has completed the necessary courses or
-                  has prior job experience in a field linked to artificial
-                  intelligence, several universities may admit them.
+                  A 12th-grade qualification and a bachelor's degree in a
+                  relevant subject, such as computer science, engineering,
+                  mathematics, or statistics, are often prerequisites for
+                  admission to AI courses. Some universities may admit students
+                  with prior coursework or work experience in AI-related fields.
                 </p>
                 <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700">
-                    English Language Proficiency:
-                  </span>
-                  English is generally used to teach courses. Thus, language
-                  skills are essential. Standardised exams like the TOEFL (Test
-                  of English as a Foreign Language) or IELTS (International
-                  English Language Testing System) are used to assess the
-                  English language proficiency of international students.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700">
+                  <span className="font-bold text-gray-700 pr-1">
                     Letters of Recommendation:
                   </span>
-                  Universities often ask for
-                  <a href="#" className="text-blue-500 px-1">
-                    letters of recommendation
-                  </a>
-                  from professors or professionals who can vouch for the
-                  applicant's academic capabilities and potential.
+                  Universities often ask for letters of recommendation from
+                  professors or professionals who can vouch for the applicant's
+                  academic capabilities and potential.
                 </p>
+
                 <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700">
+                  <span className="font-bold text-gray-700 pr-1">
                     Statement of Purpose:
                   </span>
                   A compelling
@@ -581,9 +509,9 @@ const Courses = () => {
                   application process.
                 </p>
                 <p className="text-lg text-gray-800 font-poppins">
-                  It is essential that you extensively examine the precise
-                  qualifying criteria for each university and programme of
-                  interest since they may differ.
+                  It is essential to review the specific eligibility criteria
+                  for each UK university and programme of interest, as they may
+                  differ.
                 </p>
               </div>
 
@@ -600,18 +528,18 @@ const Courses = () => {
 
               <div className="space-y-3">
                 <p className="text-lg text-gray-800 font-poppins">
-                  When it comes to studying artificial intelligence courses
-                  overseas, several institutions provide outstanding programmes
-                  that provide students with the information and abilities they
-                  need to excel in the area. Here are several well-known
-                  universities known for their AI programmes.
+                  When it comes to studying artificial intelligence in the UK,
+                  several universities stand out for their outstanding
+                  programmes, research excellence, and industry connections.
+                  These institutions provide students with the advanced
+                  knowledge and practical skills needed to excel in the field of
+                  AI.
                 </p>
 
                 <div className="mt-12 border-l border-r border-b border-gray-300 overflow-x-auto">
                   <div className="bg-red-primary w-full p-2">
                     <h3 className="text-white text-lg md:text-xl font-bold font-poppins">
-                      Artificial Intelligence Courses after 12th Abroad
-                      Universities as per QS Ranking 2024
+                      Top UK Universities for Artificial Intelligence Courses
                     </h3>
                   </div>
                   <table className="w-full table-auto text-sm text-left">
@@ -621,10 +549,13 @@ const Courses = () => {
                           University
                         </th>
                         <th className="py-3 px-6 font-poppins font-bold">
-                          State, Country
+                          Notable AI Programme(s)
                         </th>
                         <th className="py-3 px-6 font-poppins font-bold">
-                          QS World University Rankings 2024
+                          Typical Duration
+                        </th>
+                        <th className="py-3 px-6 font-poppins font-bold">
+                          Indicative Fees (International)
                         </th>
                       </tr>
                     </thead>
@@ -632,19 +563,16 @@ const Courses = () => {
                       {aiRankingUnivercity.map((data, idx) => (
                         <tr className="divide-x divide-gray-300" key={idx}>
                           <td className="px-2 py-2 font-poppins font-medium text-sm">
-                            {data.link ? (
-                              <a href="#" className="text-blue-500">
-                                {data.univercity}
-                              </a>
-                            ) : (
-                              data.univercity
-                            )}
+                            {data.univercity}
                           </td>
                           <td className="px-2 py-2 font-poppins">
-                            {data.country}
+                            {data.program}
                           </td>
                           <td className="px-2 py-2 font-poppins">
-                            {data.quRank}
+                            {data.duration}
+                          </td>
+                          <td className="px-2 py-2 font-poppins">
+                            {data.free}
                           </td>
                         </tr>
                       ))}
@@ -655,8 +583,8 @@ const Courses = () => {
                 <div className="mt-12 border-l border-r border-b border-gray-300 overflow-x-auto">
                   <div className="bg-red-primary w-full p-2">
                     <h3 className="text-white text-lg md:text-lg font-semibold md:font-bold font-poppins">
-                      Artificial Intelligence Courses After 12th Abroad
-                      Universities As Per QS Ranking By Subject
+                      Artificial Intelligence Courses After 12th Abroad: Top UK
+                      Universities (QS Subject Rankings)
                     </h3>
                   </div>
                   <table className="w-full table-auto text-sm text-left">
@@ -666,7 +594,7 @@ const Courses = () => {
                           University Name
                         </th>
                         <th className="py-3 px-6 font-poppins font-bold">
-                          State, Country
+                          Location
                         </th>
                         <th className="py-3 px-6 font-poppins font-bold">
                           QS World University Rankings by Subject 2023

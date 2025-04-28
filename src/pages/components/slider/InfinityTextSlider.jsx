@@ -7,16 +7,20 @@ const InfinityTextSlider = () => {
   const [contactOpen, setContactOpen] = useState(false);
   const slides = [
     {
-      text: "Last Call for UK Fall Intake (September) 2025 : ",
+      text: "Final Deadline Alert! UK September 2025 Intake for Artificial Intelligence :",
       button: "Apply Now!",
     },
     {
-      text: "Applications Open for USA Fall 2025 Intake : ",
-      button: "Apply Today!",
+      text: "Russell Group Universities Open! Secure Your Spot for AI Degrees - Limited Scholarships Available :",
+      button: "Apply Now!",
     },
     {
-      text: "Applications Open for January Intake Canada 2025 : ",
-      button: "Apply Today!",
+      text: "UK Student Visa Update: New Immigration Rules Simplified:",
+      button: "Apply Now!",
+    },
+    {
+      text: "Last 10 Seats Remaining! Top UK Universities for Machine Learning & AI:",
+      button: "Apply Now!",
     },
   ];
   const extended = [...slides, ...slides];
@@ -49,7 +53,9 @@ const InfinityTextSlider = () => {
                 className="flex items-center gap-5 text-white border-r px-4 font-semibold font-poppins cursor-pointer"
               >
                 <p>{text.text}</p>
-                <button className="text-yellow-dark cursor-pointer">{text.button}</button>
+                <button className="text-yellow-dark cursor-pointer">
+                  {text.button}
+                </button>
               </Link>
             </li>
           </ul>
