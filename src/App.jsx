@@ -5,6 +5,7 @@ import "./App.css";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import ContactPage from "./pages/contacts/ContactPage";
 import ScrollToTop from "./pages/components/ScrollToTop";
+import Courses from "./pages/course/Courses";
 function App() {
   return (
     <div className="relative">
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<HomePage />} />
+          <Route path="/courses" element={<Courses />} />
           <Route path="/contact" element={<ContactPage />} />
         </Route>
       </Routes>

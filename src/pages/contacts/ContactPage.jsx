@@ -200,16 +200,16 @@ const ContactPage = () => {
             ></iframe>
           </div>
         </div>
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <h1 className="text-3xl md:text-4xl font-medium font-oswald text-blue-dark">
             Branch Offices
           </h1>
           <div className="w-40 h-1 mt-2 bg-red-primary" />
-        </div>
+        </div> */}
 
-        <div className="mt-10">
+        {/* <div className="mt-10">
           <ContactCard contactdata={contactdata} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

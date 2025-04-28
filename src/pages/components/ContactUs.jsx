@@ -44,7 +44,7 @@ const ContactUs = () => {
           </Link>
         </div>
         <div className="col-span-1 flex flex-col gap-3 p-2">
-          <h2 className="text-xl font-medium font-poppins">Important Links</h2>
+          <h2 className="text-xl font-medium font-poppins">Manu</h2>
           <ul className="flex flex-col">
             <li>
               <Link
@@ -56,10 +56,10 @@ const ContactUs = () => {
             </li>
             <li>
               <Link
-                to={"/"}
+                to={"/courses"}
                 className="text-blue-dark font-medium font-poppins hover:text-blue-dark/80 hover:translate-x-2 transition-transform"
               >
-                Service
+                Courses
               </Link>
             </li>
             <li>

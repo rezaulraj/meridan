@@ -18,21 +18,8 @@ const Header = () => {
       link: "/",
     },
     {
-      label: "Services",
-      subItems: [
-        {
-          label: "Courses",
-          link: "/courses",
-        },
-        {
-          label: "IELTS",
-          link: "/ielts",
-        },
-        {
-          label: "PTE",
-          link: "/pte",
-        },
-      ],
+      label: "Courses",
+      link: "/courses",
     },
     {
       label: "Contact Us",
@@ -48,6 +35,7 @@ const Header = () => {
     setContactOpen((open) => !open);
   };
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="sticky top-0 z-[9999] bg-white">
       <div className="relative px-4 lg:px-8 xl:px-0 max-w-screen-xl mx-auto flex items-center justify-between py-3 md:py-5">
@@ -86,7 +74,7 @@ const Header = () => {
           </ul>
           <button
             onClick={IsContactButtonOpen}
-            className="flex items-center gap-x-2 bg-blue-dark hover:scale-105 hover:bg-blue-dark/70 transition-transform duration-500 text-white text-[164px] md:text-[20px] font-poppins py-3 px-5"
+            className="flex items-center gap-x-2 bg-blue-dark hover:scale-105 hover:bg-blue-dark/70 transition-transform duration-500 text-white text-[16px] md:text-[20px] font-poppins py-3 px-5"
           >
             Book Free Session <FaArrowRight />
           </button>
