@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/Aladdin-Group.png";
 import {
   FaFacebook,
   FaInstagram,
@@ -14,8 +14,8 @@ import { Link } from "react-router-dom";
 import { IoMail } from "react-icons/io5";
 const ContactUs = () => {
   return (
-    <div className="py-8 border-b-2 border-gray-200">
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <div className="py-8 border-b border-gray-50 max-w-screen-xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div className="col-span-1 flex flex-col items-center gap-6">
           <img src={logo} alt="logo" className="h-22" />
           <div className="flex items-center gap-3">
@@ -43,6 +43,40 @@ const ContactUs = () => {
             <p className="font-poppins">application02@meridean.org</p>
           </Link>
         </div>
+        <div className="col-span-1 flex flex-col gap-3 p-2">
+          <h2 className="text-xl font-medium font-poppins">Important Links</h2>
+          <ul className="flex flex-col">
+            <li>
+              <Link
+                to={"/"}
+                className="text-blue-dark font-medium font-poppins hover:text-blue-dark/80 hover:-translate-y-1 transition-transform duration-300 cursor-pointer"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/"}
+                className="text-blue-dark font-medium font-poppins hover:text-blue-dark/80 hover:translate-x-2 transition-transform"
+              >
+                Service
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/contact"}
+                className="text-blue-dark font-medium font-poppins hover:text-blue-dark/80 hover:translate-x-2 transition-transform"
+              >
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="mt-8 pt-8 border-t border-gray-700 text-center">
+        <p className=" text-gray-500 font-poppins font-medium text-sm">
+          © {new Date().getFullYear()} Aladdin Overseas. All rights reserved.
+        </p>
       </div>
     </div>
   );

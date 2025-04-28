@@ -10,7 +10,7 @@ const Footer = () => {
       <Contact />
       <Univercitys />
       <ContactUs />
-      <FooterLinks />
+      {/* <FooterLinks /> */}
     </div>
   );
 };

@@ -4,9 +4,11 @@ import HomePage from "./pages/Home/HomePage";
 import "./App.css";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import ContactPage from "./pages/contacts/ContactPage";
+import ScrollToTop from "./pages/components/ScrollToTop";
 function App() {
   return (
     <div className="relative">
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<HomePage />} />

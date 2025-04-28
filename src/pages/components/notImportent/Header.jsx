@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../assets/Aladdin-Group.png";
+import Logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import SearchModel from "./models/SearchModel";
 import { FaArrowRight, FaTimes, FaUser } from "react-icons/fa";
@@ -55,7 +55,7 @@ const Header = () => {
           <img src={Logo} className="h-16" alt="Company Logo" />
         </Link>
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-4">
+        <div className="hidden md:block">
           <ul className="flex space-x-6 items-center">
             {navItems.map((item, idx) => (
               <li key={idx}>
@@ -72,29 +72,21 @@ const Header = () => {
                 </Link>
               </li>
             ))}
-            {/* <li>
+            <li>
               <Link
                 className={`font-poppins text-[26px] transition-colors text-blue-dark hover:text-blue-dark/80`}
               >
                 <IoSearch onClick={IsSearchBoxOpen} />
                 {searchOpen && <SearchModel setSearchOpen={setSearchOpen} />}
               </Link>
-            </li> */}
+            </li>
             {/* <li>
             
           </li> */}
           </ul>
-          <button
-            onClick={IsContactButtonOpen}
-            className="flex items-center gap-x-2 bg-blue-dark hover:scale-105 hover:bg-blue-dark/70 transition-transform duration-500 text-white text-[164px] md:text-[20px] font-poppins py-3 px-5"
-          >
-            Book Free Session <FaArrowRight />
-          </button>
-
-          {contactOpen && <ContactModel setContactOpen={setContactOpen} />}
         </div>
-        {/*third section button */}
-        {/* <div className="hidden md:block relative z-50">
+        {/* button */}
+        <div className="hidden md:block relative z-50">
           <div className="hidden md:block">
             <div className="flex items-center gap-4">
               <Link
@@ -126,15 +118,15 @@ const Header = () => {
               {contactOpen && <ContactModel setContactOpen={setContactOpen} />}
             </div>
           </div>
-        </div> */}
+        </div>
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center space-x-4 transition-transform duration-500">
-          {/* <Link
+          <Link
             className={`font-poppins text-[26px] transition-colors text-blue-dark hover:text-blue-dark/80`}
           >
             <IoSearch onClick={IsSearchBoxOpen} />
             {searchOpen && <SearchModel setSearchOpen={setSearchOpen} />}
-          </Link> */}
+          </Link>
           <button
             className="text-gray-800 hover:text-red-600"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -171,7 +163,7 @@ const Header = () => {
             <div className="absolute right-0 top-0 h-full w-6/12 sm:w-4/12 bg-white shadow-xl transform transition-transform duration-300 ease-in-out">
               <div className="flex flex-col h-full relative">
                 <Link to="/">
-                  <img src={Logo} className="h-14" alt="Company Logo" />
+                  <img src={Logo} className="h-16" alt="Company Logo" />
                 </Link>
                 {/* Menu Header */}
 
