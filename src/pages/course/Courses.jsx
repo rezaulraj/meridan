@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import ai from "../../assets/ai.png"
+import ai from "../../assets/artificial.png"
 import FqsList from "../components/FqsList";
 const Courses = () => {
   const homeData = [
