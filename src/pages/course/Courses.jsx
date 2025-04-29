@@ -339,7 +339,7 @@ const Courses = () => {
                 <img
                   src={AI}
                   alt="Artificial Intelligence Program"
-                  className="w-full object-cover"
+                  className="w-full object-contain"
                 />
                 {/* <div className="absolute inset-0 bg-white/2"></div> */}
               </div>
