@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import contact from "../../assets/bookyouronlinecounsellingsession.jpg";
+import contact from "../../assets/bookyouronline.jpg";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 import { TbLoader } from "react-icons/tb";
