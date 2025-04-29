@@ -3,7 +3,7 @@ import { FaPhoneVolume } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { MdArrowForwardIos } from "react-icons/md";
 import { Link } from "react-router-dom";
-import topImage from "../../assets/londonbridge.jpg";
+import topImage from "../../assets/london.jpg";
 // import img1 from "../../assets/contact/dubai.webp";
 // import img2 from "../../assets/contact/pune.webp";
 // import img3 from "../../assets/contact/lucknow.webp";
@@ -15,7 +15,7 @@ import topImage from "../../assets/londonbridge.jpg";
 // import img9 from "../../assets/contact/mumbai.webp";
 // import img10 from "../../assets/contact/indore-ofc.webp";
 // import img11 from "../../assets/contact/ahmedabad-ofc.webp";
-import ContactCard from "./ContactCard";
+// import ContactCard from "./ContactCard";
 import { RiWhatsappFill } from "react-icons/ri";
 const ContactPage = () => {
   // const contactdata = [
