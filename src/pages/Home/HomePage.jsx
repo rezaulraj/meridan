@@ -111,13 +111,13 @@ const HomePage = () => {
             </h3>
           </div>
           <div className="mt-12">
-            <ul className="grid grid-cols-2 md:grid-cols-3 items-center justify-center gap-y-10 ">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-y-10 ">
               {stats.map((item, idx) => (
                 <li key={idx} className="text-center px-12 md:px-16">
                   <h4 className="text-5xl text-blue-dark font-oswald font-bold">
                     {item.data}
                   </h4>
-                  <p className="mt-3 font-medium">{item.title}</p>
+                  <p className="mt-3 font-poppins text-lg font-medium">{item.title}</p>
                 </li>
               ))}
             </ul>
