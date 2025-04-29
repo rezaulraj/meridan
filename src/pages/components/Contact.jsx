@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Contact = () => {
   return (
     <div
+      id="consultation"
       className="bg-cover py-16 px-2 relative"
       style={{ backgroundImage: `url(${contact})` }}
     >

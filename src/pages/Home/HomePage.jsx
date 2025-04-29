@@ -55,9 +55,15 @@ const HomePage = () => {
               journey to studying AI in England.
             </p>
 
-            <button className="flex items-center gap-x-2 bg-blue-dark hover:scale-105 hover:bg-blue-dark/70 transition-transform duration-500 text-white text-[20px] font-poppins py-3 px-5">
-              Book Your Free UK AI Consultation <FaArrowRight />
-            </button>
+            <a
+              href="#consultation"
+              className="inline-flex items-center gap-2 bg-blue-dark hover:scale-105 hover:bg-blue-dark/70 transition-transform duration-500 text-white text-[20px] font-poppins py-3 px-5"
+            >
+              Book Your Free UK AI Consultation{" "}
+              <span>
+                <FaArrowRight />
+              </span>
+            </a>
           </div>
         </div>
       </div>
