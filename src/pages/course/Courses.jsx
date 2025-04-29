@@ -468,7 +468,7 @@ const Courses = () => {
                   state-of-the-art methodologies.
                 </p>
                 <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">
+                  <span className="font-bold text-gray-700 pr-1.5">
                     Advanced Facilities:
                   </span>
                   UK institutions often feature specialized AI labs,

@@ -134,7 +134,7 @@ const Contact = () => {
                   className="border border-gray-200 w-5 h-5 focus:outline-none cursor-pointer"
                 />
                 <p className="text-gray-600 text-sm font-poppins">
-                  Yes, I'd like a free{" "}
+                  Yes, I'd like a free
                   <a href="#" className="text-blue-500 px-1">
                     SOP
                   </a>
