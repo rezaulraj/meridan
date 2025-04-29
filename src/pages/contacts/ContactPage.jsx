@@ -16,6 +16,7 @@ import img9 from "../../assets/contact/mumbai.webp";
 import img10 from "../../assets/contact/indore-ofc.webp";
 import img11 from "../../assets/contact/ahmedabad-ofc.webp";
 import ContactCard from "./ContactCard";
+import { RiWhatsappFill } from "react-icons/ri";
 const ContactPage = () => {
   const contactdata = [
     {
@@ -143,37 +144,67 @@ const ContactPage = () => {
         </div>
         {/* text */}
         <div className="mt-6 space-y-4">
-          <h1 className="text-3xl md:text-5xl font-medium font-oswald text-blue-dark">
-            We're Here, Let's Talk
+          <h1 className="text-3xl md:text-5xl font-medium font-oswald text-blue-dark uppercase">
+            Connect With Us: Your AI Education Partners
           </h1>
           <p className="text-lg text-gray-700 font-poppins">
-            We believe in being the best ally to our students. When we say,
-            "quality education is a right and not a luxury," we mean it in every
-            sense. No matter what's bothering you, Our experienced counsellors
-            of the top study abroad destinations are here to solve your every
-            doubt regarding studying abroad. Call us at any time or stop by one
-            of our branches to see us.
+            At Aladdin Group, we champion the belief that world-class education
+            is a fundamental right, not an exclusive privilege. We’re committed
+            to empowering your journey with tailored guidance and unwavering
+            support. Whether you’re navigating course choices, scholarship
+            applications, visa processes, or career pathways, our expert
+            counsellors are here to resolve every query, big or small.
           </p>
         </div>
         {/* head */}
         <div className="mt-8">
-          <h1 className="text-3xl md:text-4xl font-medium font-oswald text-blue-dark">
-            Head Office
+          <h1 className="text-3xl md:text-4xl font-medium font-oswald text-blue-dark uppercase">
+            How We Can Help
           </h1>
-          <div className="w-40 h-1 mt-2 bg-red-primary" />
+          <div className="w-56 h-1 mt-2 bg-red-primary" />
+        </div>
+        <div>
+          <ul className="space-y-2 px-2">
+            <li className="font-poppins text-lg text-gray-700 ">
+              <span className="text-blue-dark pr-2">✔</span>
+              <span className="pr-2 font-semibold text-gray-700">
+                Personalised Guidance:
+              </span>
+              From programme selection to post-study opportunities, we provide
+              end-to-end support.
+            </li>
+            <li className="font-poppins text-lg text-gray-800 ">
+              <span className="text-blue-dark pr-2">✔</span>
+              <span className="pr-2 font-semibold text-gray-700">
+                Flexible Consultations:
+              </span>
+              Visit our office, schedule a call, or connect online-we adapt to
+              your needs.
+            </li>
+            <li className="font-poppins text-lg text-gray-800">
+            <span className="text-blue-dark pr-2">✔</span><span className="pr-2 font-semibold text-gray-700">
+                UK-Focused Expertise:
+              </span>
+              Specialising in AI courses at leading UK universities, we ensure
+              you make informed decisions.
+            </li>
+          </ul>
         </div>
         <div className="mt-8 space-y-4">
           <h2 className="text-xl md:text-3xl font-medium font-oswald text-gray-700">
-            Meridean Overseas - Jaipur
+            Aladdin Group - UK AI Education Specialists
           </h2>
           <p className="text-gray-600 font-medium font-poppins text-lg">
-            Plot no 7, Vaishali Marg, Ganga Sagar-B, Vaishali Nagar, Jaipur,
-            Rajasthan - 302021
+            23 Basedale Road, Dagenham, Essex RM9 4QA
           </p>
-          <span className="flex items-center flex-wrap gap-2 text-blue-500">
+          <span className="flex items-center flex-wrap gap-2 text-blue-700">
             <span className="flex items-center gap-2">
               <FaPhoneVolume />
-              <a href="">1800123000011</a>
+              <a href="">+44 7943 642473 (UK Office)</a>
+            </span>
+            <span className="flex items-center gap-2">
+              <RiWhatsappFill />
+              <a href="">WhatsApp: +44 7943 642473</a>
             </span>
             <span className="flex items-center gap-2">
               <IoMail />
@@ -188,7 +219,7 @@ const ContactPage = () => {
             <img src={topImage} alt="" />
 
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.6237878239735!2d75.7308857754396!3d26.91543237664553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db49e382c696d%3A0x40267e56404d31a8!2sMeridean%20Overseas%20Education%20Consultants%20in%20Jaipur%20(Study%20Abroad%20Consultants%20and%20Coaching%20for%20IELTS%2CGRE%2CGMAT%20and%20SAT)!5e0!3m2!1sen!2sbd!4v1745820956207!5m2!1sen!2sbd"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.5493329776236!2d0.1112662766220392!3d51.539825271820774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a5c1178c22d3%3A0x313e56236536d8b9!2s23%20Basedale%20Rd%2C%20Dagenham%20RM9%204QA%2C%20UK!5e0!3m2!1sen!2sbd!4v1745900339770!5m2!1sen!2sbd"
               style={{
                 border: "5px solid #a9aaac", // 10px thick, solid black
                 borderRadius: "6px", // optional: rounded corners

@@ -12,10 +12,11 @@ import img4 from "../../../assets/univercity/u4.jpg";
 import img5 from "../../../assets/univercity/u5.jpg";
 import img6 from "../../../assets/univercity/u6.png";
 import img7 from "../../../assets/univercity/u7.jpg";
-import img8 from "../../../assets/univercity/u8.png";
-import img9 from "../../../assets/univercity/u9.png";
-import img10 from "../../../assets/univercity/u10.jpg";
+// import img8 from "../../../assets/univercity/u8.png";
+// import img9 from "../../../assets/univercity/u9.png";
+// import img10 from "../../../assets/univercity/u10.jpg";
 import img11 from "../../../assets/univercity/u11.png";
+// import img12 from "../../../assets/univercity/u12.png";
 import { Link } from "react-router-dom";
 const Univercitys = () => {
   const swiperRef = useRef(null);
@@ -29,10 +30,11 @@ const Univercitys = () => {
     { id: 5, img: img5 },
     { id: 6, img: img6 },
     { id: 7, img: img7 },
-    { id: 8, img: img8 },
-    { id: 9, img: img9 },
-    { id: 10, img: img10 },
+    // { id: 8, img: img8 },
+    // { id: 9, img: img9 },
+    // { id: 10, img: img10 },
     { id: 11, img: img11 },
+    // { id: 12, img: img12 },
   ];
   return (
     <div className="bg-white">
@@ -65,7 +67,7 @@ const Univercitys = () => {
           {items.map((item) => (
             <SwiperSlide key={item.id}>
               <Link
-                className=" flex items-center justify-center 
+                className="flex items-center justify-center 
           rounded-lg transition-shadow duration-300 cursor-pointer"
               >
                 <img src={item.img} alt="" />

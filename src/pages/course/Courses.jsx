@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import AI from "../../assets/ai/aifront.png";
 import FqsList from "../components/FqsList";
 const Courses = () => {
@@ -226,7 +226,7 @@ const Courses = () => {
 
   const criteria = [
     {
-      list: " Eligibility criteria",
+      list: "Eligibility criteria",
     },
     {
       list: "Top AI courses & specializations",
@@ -244,29 +244,42 @@ const Courses = () => {
 
   const [activeLink, setActiveLink] = useState(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      let found = false;
-      homeData.forEach((data) => {
-        const sectionId = data.link.slice(1);
-        const section = document.getElementById(sectionId);
-        if (section && !found) {
-          const rect = section.getBoundingClientRect();
-          if (
-            rect.top <= window.innerHeight / 2 &&
-            rect.bottom >= window.innerHeight / 2
-          ) {
-            setActiveLink(sectionId);
-            found = true;
-          }
-        }
-      });
-    };
+  const handleScroll = useCallback(() => {
+    const sections = homeData.map((data) =>
+      document.getElementById(data.link.slice(1))
+    );
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
-    return () => window.removeEventListener("scroll", handleScroll);
+    for (const section of sections) {
+      if (!section) continue;
+      const { offsetTop, offsetHeight } = section;
+      if (
+        scrollPosition >= offsetTop &&
+        scrollPosition < offsetTop + offsetHeight
+      ) {
+        setActiveLink(section.id);
+        break;
+      }
+    }
   }, []);
+
+  useEffect(() => {
+    const throttledScroll = throttle(handleScroll, 100);
+    window.addEventListener("scroll", throttledScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", throttledScroll);
+  }, [handleScroll]);
+
+  function throttle(fn, wait) {
+    let time = Date.now();
+    return function () {
+      if (time + wait - Date.now() < 0) {
+        fn();
+        time = Date.now();
+      }
+    };
+  }
 
   return (
     <div className="max-w-screen-xl mx-auto">
@@ -281,7 +294,7 @@ const Courses = () => {
                   return (
                     <li
                       key={indx}
-                      className={`p-2 ${
+                      className={`p-0 ${
                         activeLink === sectionId
                           ? "bg-blue-dark text-white"
                           : "hover:bg-gray-200"
@@ -289,8 +302,22 @@ const Courses = () => {
                     >
                       <a
                         href={data.link}
-                        className={`font-poppins ${
-                          activeLink === sectionId ? "" : "hover:text-gray-900"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const section = document.getElementById(sectionId);
+                          if (section) {
+                            setActiveLink(sectionId);
+                            section.scrollIntoView({
+                              behavior: "smooth",
+                              block: "center",
+                            });
+                            setTimeout(() => handleScroll(), 1000);
+                          }
+                        }}
+                        className={`block p-2 font-poppins ${
+                          activeLink === sectionId
+                            ? "text-white"
+                            : "text-gray-800 hover:text-gray-900"
                         }`}
                       >
                         {data.title}
@@ -638,15 +665,15 @@ const Courses = () => {
               </div>
               <div className="space-y-3">
                 <p className="text-lg text-gray-800 font-poppins">
-                  Students who study artificial intelligence in abroad countries
-                  have access to a diverse range of courses tailored to their
-                  unique interests and professional aspirations. Candidates can
-                  study in artificial intelligence courses at any level, such as
-                  bachelor’s, master’s, PG diploma, etc.
+                  Students pursuing artificial intelligence in the UK have
+                  access to a wide range of courses designed to suit their
+                  interests and career goals. AI courses are available at
+                  multiple academic levels, including bachelor’s, master’s, and
+                  postgraduate diploma programmes.
                 </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  Here is a list of popular Artificial Intelligence Subjects
-                  available at institutions throughout the world.
+                <p className="text-lg text-gray-800 font-medium font-poppins">
+                  Here are some popular AI subject areas offered by UK
+                  institutions:
                 </p>
                 <div>
                   <ul
@@ -678,283 +705,80 @@ const Courses = () => {
 
               <div className="space-y-3">
                 <p className="text-lg text-gray-800 font-poppins">
-                  Understanding the tuition fees and living expenses is
-                  essential for budgeting when thinking about studying
-                  artificial intelligence courses in other countries. Tuition
-                  and living expenses may differ greatly depending on the
-                  nation, university, and locality.
+                  Understanding tuition fees and living expenses is essential
+                  for planning your studies in the UK. Costs can vary depending
+                  on the university, city, and type of programme.
                 </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  An analysis of artificial intelligence course fees and living
-                  expenses in well-liked study locations is shown below.
-                </p>
-                <h2 className="font-bold text-xl text-gray-800 font-poppins">
-                  Artificial Intelligence Course Fee & Living Expenses in United
-                  States (USA)
-                </h2>
+
                 <p className="text-lg text-gray-800 font-poppins">
                   <span className="font-bold text-gray-700 pr-1">
                     Tuition Fees -
                   </span>
-                  The tuition fees for AI courses after 12th or bachelor’s in
-                  the USA can range from $20,000 to $40,000 per year, depending
-                  on the university and program level. Public universities
-                  generally have lower tuition fees for in-state residents than
-                  international students. It may be possible that Private
-                  universities & some prestigious institutions have higher fees
-                  than public institutions.
+                  For international students, AI course fees typically range
+                  from £15,000 to £30,000 per year. Fees may be higher at
+                  prestigious universities or for specialised AI programmes.
                 </p>
                 <p className="text-lg text-gray-800 font-poppins">
                   <span className="font-bold text-gray-700 pr-1">
                     Living Costs -
                   </span>
-                  The average living costs, including accommodation, food,
-                  transportation, and other expenses, can range from $8,000 to
-                  $18,000 per year. Living costs vary significantly depending on
-                  the location, with cities like New York and San Francisco
-                  being more expensive than smaller college towns.
+                  Average living expenses-including accommodation, food,
+                  transportation, and other essentials-generally range from
+                  £10,000 to £18,000 per year, depending on the location and
+                  lifestyle.
                 </p>
-
+                <p className="text-lg text-gray-800 font-poppins">
+                  It is important to check the latest tuition and living costs
+                  for your chosen university and course. Aladdin Group
+                  counsellors can provide updated guidance and help you plan
+                  your budget.
+                </p>
                 <h2 className="font-bold text-xl text-gray-800 font-poppins">
-                  Artificial Intelligence Course Fee & Living Expenses in the
-                  United Kingdom (UK)
+                  Student Visa Cost for Artificial Intelligence Courses in the
+                  UK
                 </h2>
                 <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">
-                    Tuition Fees -
-                  </span>
-                  While studying{" "}
-                  <a href="#" className="text-blue-500 px-1">
-                    Artificial Intelligence in the UK
-                  </a>
-                  , tuition fees for AI programs vary between £15,000 and
-                  £30,000 per year for international students. Tuition fees may
-                  be higher for prestigious universities or specialized AI
-                  programs.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">
-                    Living Costs -
-                  </span>
-                  The average living costs, including accommodation, food,
-                  transportation, and other expenses, can range from $8,000 to
-                  $18,000 per year. Living costs vary significantly depending on
-                  the location, with cities like New York and San Francisco
-                  being more expensive than smaller college towns.
+                  Obtaining a student visa is required for international
+                  students studying AI in the UK.
                 </p>
 
+                <div>
+                  <ul
+                    className="space-y-2 px-4"
+                    style={{ listStyle: "square" }}
+                  >
+                    <li className="font-poppins text-lg text-gray-800 marker:text-blue-dark">
+                      <span className="pr-2 font-bold text-gray-700">
+                        Visa Application Fee:
+                      </span>
+                      Approximately £348 for applications made outside the UK.
+                    </li>
+                    <li className="font-poppins text-lg text-gray-800 marker:text-blue-dark">
+                      <span className="pr-2 font-bold text-gray-700">
+                        Immigration Health Surcharge (IHS):
+                      </span>
+                      £470 per year for international students, mandatory for
+                      all overseas applicants.
+                    </li>
+                  </ul>
+                </div>
+
+                <p className="text-lg text-gray-800 font-poppins">
+                  These costs are subject to change, so always verify current
+                  fees before applying.
+                </p>
                 <h2 className="font-bold text-xl text-gray-800 font-poppins">
-                  Artificial Intelligence Course Fee & Living Expenses in
-                  Australia
+                  Scholarships for Artificial Intelligence Courses in the UK
                 </h2>
                 <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">
-                    Tuition Fees -
-                  </span>
-                  Australian universities offer AI courses with tuition fees
-                  ranging from AUD 30,000 to AUD 60,000 annually for
-                  international students. Tuition fees may be higher for
-                  postgraduate programs or specialized AI courses.
+                  Studying AI in the UK can be expensive, but various
+                  scholarships and funding options are available to support
+                  international students. Many UK universities, government
+                  bodies, and private organisations offer scholarships
+                  specifically for AI or related fields.
                 </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">
-                    Living Costs -
-                  </span>
-                  The living costs in{" "}
-                  <a href="#" className="text-blue-500 px-1">
-                    Australia
-                  </a>{" "}
-                  can vary depending on the city and lifestyle. On average,
-                  students should budget around AUD 21,041 per year for
-                  accommodation, food, transportation, and other expenses.
-                </p>
-
-                <h2 className="font-bold text-xl text-gray-800 font-poppins">
-                  Artificial Intelligence Course Fee & Living Expenses in Canada
-                </h2>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">
-                    Tuition Fees -
-                  </span>
-                  In Canada, tuition fees for Artificial Intelligence courses
-                  for international students range from CAD 15,000 to CAD 40,000
-                  per year. Tuition fees may vary based on the university and
-                  program level.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">
-                    Living Costs -
-                  </span>
-                  The living costs in Canada vary depending on the province and
-                  city. Students should plan to spend between CAD 10,000 and CAD
-                  15,000 per year on living expenses, food, transportation, and
-                  personal expenses.
-                </p>
-
-                <h2 className="font-bold text-xl text-gray-800 font-poppins">
-                  Artificial Intelligence Course Fee & Living Expenses in New
-                  Zealand
-                </h2>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">
-                    Tuition Fees -
-                  </span>
-                  In New Zealand, tuition fees for international students
-                  pursuing AI courses range from NZD 30,000 to NZD 50,000 per
-                  year. Tuition fees may vary based on the university and
-                  program level.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">
-                    Living Costs -
-                  </span>
-                  The average living costs in New Zealand range is NZD 20,000
-                  per year. This will include housing (rent), food,
-                  transportation, & other expenses.
-                </p>
-
-                <h2 className="font-bold text-xl text-gray-800 font-poppins">
-                  Artificial Intelligence Course Fee & Living Expenses in Europe
-                </h2>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">
-                    Tuition Fees -
-                  </span>
-                  Tuition fees in European countries such as Germany, France,
-                  Netherlands, and Sweden vary significantly. In general,
-                  tuition fees for international students range from EURO 1500
-                  to EURO 8,000 per year, depending on the country and
-                  university.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">
-                    Living Costs -
-                  </span>
-                  Living costs in Europe can vary greatly depending on the
-                  country and city. On average, students should budget
-                  approximately EURO 6,000 to EURO 8,000 per year for
-                  accommodation, food, transportation, and other expenses.
-                </p>
-
-                <p className="text-lg text-gray-800 font-poppins">
-                  It’s important to verify the Artificial Intelligence Course
-                  Fee before applying. For this, you can discuss with our
-                  counsellors. They will guide you in every step of your abroad
-                  journey and provide you with all the study
-                  <a href="#" className="text-blue-500 px-1">
-                    abroad
-                  </a>
-                  information.
-                </p>
-              </div>
-
-              {/* part eight */}
-              <div>
-                <h1
-                  id="visa"
-                  className="text-blue-dark text-xl md:text-3xl font-bold font-poppins"
-                >
-                  Student Visa Cost for Artificial Intelligence Courses
-                </h1>
-                <div className="w-40 h-1 mt-2 bg-red-primary" />
-              </div>
-              <div className="space-y-3">
-                <p className="text-lg text-gray-800 font-poppins">
-                  To study artificial intelligence subjects abroad, getting a
-                  student visa is crucial. The cost of a visa varies by nation
-                  and length of study. Here is a detail of student visa fees for
-                  well-known study abroad locations.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">
-                    United States (USA) :
-                  </span>
-                  The application fee for an{" "}
-                  <a href="#" className="text-blue-500 px-1">
-                    F-1 student visa in the USA
-                  </a>
-                  is currently $350. The USA also has a SEVIS fee (Student and
-                  Exchange Visitor Information System) of $185 to get a student
-                  visa.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">
-                    United Kingdom (UK) :
-                  </span>
-                  The visa application fee for a Tier 4{" "}
-                  <a href="#" className="text-blue-500 px-1">
-                    student visa in the UK
-                  </a>
-                  varies depending on the location. As of the current criteria,
-                  the fee is approximately £348 for applications made outside
-                  the{" "}
-                  <a href="#" className="text-blue-500 px-1">
-                    UK
-                  </a>
-                  . International students have to pay £470 per year for the
-                  Immigration Health Surcharge (IHS). It is necessary for all
-                  overseas students.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">
-                    Australia :
-                  </span>{" "}
-                  The base application fee for a student visa in Australia is
-                  AUD 715. Additional charges may apply for family members
-                  included in the application.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">Canada :</span>
-                  The application fee for a study permit in Canada is CAD 150.
-                  In addition, there may be biometric fees of CAD 85.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">Europe:</span>
-                  <a href="#" className="text-blue-500 px-1">
-                    European countries
-                  </a>{" "}
-                  within the Schengen Area generally require a Schengen student
-                  visa. The application fee for a Schengen student visa is
-                  approximately from EURO 90 to EURO 150. However, visa
-                  requirements and costs can vary among European countries.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="font-bold text-gray-700 pr-1">
-                    New Zealand :
-                  </span>
-                  The application fee for a student visa in New Zealand varies
-                  depending on the applicant's country of citizenship. As per
-                  the government criteria, the fee range is NZD 375.
-                </p>
-              </div>
-
-              {/* part ning */}
-              <div>
-                <h1
-                  id="scholarships"
-                  className="text-blue-dark text-xl md:text-3xl font-bold font-poppins"
-                >
-                  Scholarships for Artificial Intelligence Courses Abroad
-                </h1>
-                <div className="w-40 h-1 mt-2 bg-red-primary" />
-              </div>
-              <div className="space-y-3">
-                <p className="text-lg text-gray-800 font-poppins">
-                  It might be expensive to study artificial intelligence
-                  subjects abroad, but there are several scholarships and
-                  financing options available to assist international students.
-                  Many colleges, governmental agencies, and private
-                  organisations provide these scholarships.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  The following scholarships concentrate on artificial
-                  intelligence or related fields. It is vital to remember that
-                  there might be differences in these scholarship availability
-                  and qualifying requirements. In order to obtain comprehensive
-                  information and submit applications for scholarships that are
-                  appropriate for their academic standing and financial
-                  requirements, prospective students should do extensive
-                  research or talk to our certified counselors.
+                <p className="text-lg text-gray-800 font-bold font-poppins">
+                  Examples include:
                 </p>
                 <div>
                   <ul
@@ -973,104 +797,125 @@ const Courses = () => {
                 </div>
               </div>
 
+              {/* part eight */}
+              <div>
+                <h1
+                  id="visa"
+                  className="text-blue-dark text-xl md:text-3xl font-bold font-poppins"
+                >
+                  Student Visa Cost for Artificial Intelligence Courses in the
+                  UK
+                </h1>
+                <div className="w-40 h-1 mt-2 bg-red-primary" />
+              </div>
+              <div className="space-y-3">
+                <p className="text-lg text-gray-800 font-poppins">
+                  Securing a student visa is a vital step for international
+                  students planning to study artificial intelligence in the UK.
+                  The main costs involved are:
+                </p>
+                <div>
+                  <ul
+                    className="space-y-2 px-4"
+                    style={{ listStyle: "square" }}
+                  >
+                    <li className="font-poppins text-lg text-gray-800 marker:text-blue-dark">
+                      <span className="pr-2 font-bold text-gray-700">
+                        Visa Application Fee:
+                      </span>
+                      The standard fee for a UK student visa (Tier 4/Student
+                      Route) is approximately £363 when applying from outside
+                      the UK.
+                    </li>
+                    <li className="font-poppins text-lg text-gray-800 marker:text-blue-dark">
+                      <span className="pr-2 font-bold text-gray-700">
+                        Immigration Health Surcharge (IHS):
+                      </span>
+                      International students are also required to pay the IHS,
+                      which is £470 per year. This fee provides access to the
+                      National Health Service (NHS) during your studies.
+                    </li>
+                  </ul>
+                </div>
+
+                <p className="text-lg text-gray-800 font-poppins">
+                  These charges are mandatory for all overseas students and
+                  should be factored into your overall study budget. Fees may be
+                  updated periodically, so always check the latest requirements
+                  before applying.
+                </p>
+              </div>
+
+              {/* part ning */}
+              <div>
+                <h1
+                  id="scholarships"
+                  className="text-blue-dark text-xl md:text-3xl font-bold font-poppins"
+                >
+                  Scholarships for Artificial Intelligence Courses in the UK
+                </h1>
+                <div className="w-40 h-1 mt-2 bg-red-primary" />
+              </div>
+              <div className="space-y-3">
+                <p className="text-lg text-gray-800 font-poppins">
+                  It might be expensive to study artificial intelligence
+                  subjects abroad, but there are several Pursuing AI studies in
+                  the UK can be a significant investment, but a range of
+                  scholarships and financial aid options are available to help
+                  international students manage costs. Scholarships may be
+                  provided by universities, government bodies, or private
+                  organisations, and often target students with strong academic
+                  records or financial need.
+                </p>
+                <p className="text-lg text-gray-700 font-bold font-poppins">
+                  Notable awards include:
+                </p>
+                <div>
+                  <ul
+                    className="space-y-2 px-4"
+                    style={{ listStyle: "square" }}
+                  >
+                    {scholarship.map((list, idx) => (
+                      <li
+                        key={idx}
+                        className="font-poppins text-lg text-gray-800 marker:text-blue-dark"
+                      >
+                        {list.list}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <p className="text-lg text-gray-800 font-poppins">
+                  Each scholarship has its own eligibility criteria and
+                  application process. Prospective students are encouraged to
+                  research thoroughly or consult Aladdin Group counsellors for
+                  up-to-date information and application support.
+                </p>
+              </div>
+
               {/* part ten */}
               <div>
                 <h1
                   id="salary"
                   className="text-blue-dark text-xl md:text-3xl font-bold font-poppins"
                 >
-                  Salary after Artificial Intelligence Courses Abroad
+                  Salary after Artificial Intelligence Courses in the UK
                 </h1>
                 <div className="w-40 h-1 mt-2 bg-red-primary" />
               </div>
               <div className="space-y-3">
                 <p className="text-lg text-gray-800 font-poppins">
-                  Studying Artificial Intelligence courses abroad can open up
-                  doors to lucrative careers and market-leading pay. The
-                  earnings in the field of artificial intelligence vary based on
-                  the nation, job title, work experience, and sector.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  The wages indicated below are estimates that may change
-                  depending on a variety of circumstances. AI experts are more
-                  likely to make more money if they have graduate degrees,
-                  professional certifications, research experience, and
-                  knowledge in niche fields like machine learning, natural
-                  language processing, or robotics.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  The following details provide an overview of AI professionals’
-                  salaries in well-known study locations.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="text-gray-700 font-bold font-poppins pr-1">
-                    United States:
-                  </span>
-                  According to the U.S. Bureau of Labor Statistics, the annual
-                  wage for computer and information research scientists, which
-                  includes AI professionals, is around $125,000. However, AI
-                  professionals with advanced degrees, industry experience, and
-                  expertise in specialized areas can earn significantly higher
-                  salaries, reaching six figures or more.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="text-gray-700 font-bold font-poppins pr-1">
-                    United Kingdom:
-                  </span>
-                  In the UK, AI professionals' salaries vary based on factors
-                  such as job role, industry, and location. According to the
-                  Office for National Statistics, the annual salary for IT and
-                  telecommunications professionals is an average of £50,000.
-                  However, AI specialists with advanced qualifications and
-                  expertise can command higher salaries, especially in the
-                  finance, healthcare, and technology sectors.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="text-gray-700 font-bold font-poppins pr-1">
-                    Australia:
-                  </span>
-                  AI professionals in Australia generally earn competitive
-                  salaries. According to the Australian Government's Job
-                  Outlook, the annual salary for ICT professionals, including
-                  those specializing in AI, is around AUD 90,000. However,
-                  salaries can vary depending on factors such as qualifications,
-                  experience, and the specific industry.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="text-gray-700 font-bold font-poppins pr-1">
-                    Canada:
-                  </span>
-                  Salaries for AI professionals in Canada are influenced by
-                  factors such as the industry, location, and level of
-                  expertise. According to the Government of
-                  <a href="#" className="text-blue-500 ">
-                    Canada
-                  </a>
-                  's Job Bank, the salary for AI professionals is an average of
-                  CAD 45.65 per hour.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="text-gray-700 font-bold font-poppins pr-1">
-                    New Zealand:
-                  </span>
-                  The salaries for AI professionals in
-                  <a href="#" className="text-blue-500 px-1">
-                    New Zealand
-                  </a>
-                  can vary depending on factors such as qualifications,
-                  experience, and industry demand. According to Careers New
-                  Zealand, the annual salary for ICT professionals, including
-                  those specializing in AI, is around NZD 80,000 to NZD 100,000.
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  <span className="text-gray-700 font-bold font-poppins pr-1">
-                    Europe:
-                  </span>
-                  Salaries for AI professionals in Europe can vary greatly among
-                  countries and industries. For example, in Germany, AI
-                  professionals can earn salaries ranging from €50,000 to
-                  €100,000 or more, depending on their qualifications and
-                  experience.
+                  Completing an artificial intelligence course in the UK can
+                  lead to rewarding career opportunities and competitive
+                  salaries. Earnings vary depending on job title, sector,
+                  location, and experience. According to the Office for National
+                  Statistics, the average annual salary for IT and
+                  telecommunications professionals in the UK is around £50,000.
+                  AI specialists with advanced qualifications and niche
+                  expertise-such as in machine learning, natural language
+                  processing, or robotics-can command even higher salaries,
+                  especially in sectors like finance, healthcare, and
+                  technology.
                 </p>
               </div>
               {/* part eleven */}
@@ -1079,64 +924,36 @@ const Courses = () => {
                   id="conclusion"
                   className="text-blue-dark text-xl md:text-3xl font-bold font-poppins"
                 >
-                  Conclusion
+                  Final Considerations
                 </h1>
                 <div className="w-40 h-1 mt-2 bg-red-primary" />
               </div>
               <div className="space-y-3">
                 <p className="text-lg text-gray-800 font-poppins">
-                  Aside from exposure to famous universities, various learning
-                  environments, cutting-edge facilities, and increased
-                  employment chances, studying artificial intelligence courses
-                  abroad has several advantages. While the price of an education
-                  in AI courses after 12th and daily living expenditures differ
-                  depending on where a student chooses to study, there are
-                  scholarships and financial options available to help overseas
-                  students.
+                  Pursuing artificial intelligence studies overseas offers
+                  unparalleled advantages, including access to globally renowned
+                  institutions, innovative learning environments,
+                  state-of-the-art facilities, and enhanced career prospects.
+                  While tuition and living costs vary by study destination,
+                  scholarships and funding opportunities are widely available to
+                  ease financial burdens for international students.
                 </p>
                 <p className="text-lg text-gray-800 font-poppins">
-                  Additionally, based on their credentials, area of expertise,
-                  and market demand, AI experts may anticipate earning excellent
-                  wages in nations. Before making a choice, prospective students
-                  must conduct extensive research on Artificial Intelligence
-                  subjects, colleges, costs, financial aid opportunities, and
-                  job possibilities.
+                  AI professionals can expect competitive salaries influenced by
+                  qualifications, specialisation, and regional market demands.
+                  To make informed decisions, prospective students should
+                  thoroughly evaluate programmes, institutions, costs, funding
+                  options, and career pathways.
                 </p>
                 <p className="text-lg text-gray-800 font-poppins">
-                  We have provided sufficient information about the best
-                  Artificial Intelligence courses after 12th abroad.
+                  The insights provided here aim to guide students seeking top
+                  AI programmes abroad. For tailored advice, consult Aladdin
+                  Group’s expert counsellors for UK-focused AI course
+                  placements.
                 </p>
                 <p className="text-lg text-gray-800 font-poppins">
-                  If you are unsure or want deeper insight, we encourage you to
-                  speak with our expert counsellors a
-                  <span className="font-bold font-poppins text-gray-700">
-                    Meridean Overseas Education Consultants
-                    <a href="" className="text-blue-500 pl-1">
-                      (MOEC)
-                    </a>
-                  </span>
-                  .
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  If you cannot travel to our offices, we offer
-                  <a href="#" className="text-blue-500 px-1">
-                    online counselling services
-                  </a>
-                  via our website. Our dedicated counsellors will provide the
-                  best guidance regarding your application to study abroad at
-                  universities. Don’t hesitate to contact us at
-                  <a href="#" className="text-blue-500 px-1">
-                    application02@meridean.org
-                  </a>
-                  or call us at
-                  <a href="#" className="text-blue-500 px-1">
-                    1800-1230-00011
-                  </a>
-                  .
-                </p>
-                <p className="text-lg text-gray-800 font-poppins">
-                  If you found this information useful, please share it with
-                  your friends looking to study abroad.
+                  If unable to visit in person, utilise online consultation
+                  services via our website.
                 </p>
               </div>
 

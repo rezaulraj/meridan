@@ -16,7 +16,7 @@ const ContactModel = ({ setContactOpen }) => {
               id="modalTitle"
               className="text-xl font-bold text-blue-dark sm:text-2xl p-6 text-center"
             >
-              Contact MOEC Experts for Study Abroad Guidance!
+              Contact Aladdin Group Experts for Study Abroad Guidance
             </h2>
 
             <button
@@ -53,14 +53,20 @@ const ContactModel = ({ setContactOpen }) => {
               required
             />
             <div className="w-full flex items-center border-b border-gray-200 py-4">
-              <select name="" id="" className="focus:outline-none w-20 text-gray-600">
-                <option value="+99">+99</option>
-                <option value="66">66</option>
-                <option value="88">88</option>
+              <select
+                name=""
+                id=""
+                className="focus:outline-none w-42 text-gray-600"
+              >
+                <option>Country Code</option>
+                <option value="91">+91</option>
+                <option value="92">+92</option>
+                <option value="88">+88</option>
+                <option value="86">+86</option>
               </select>
               <input
                 type="number"
-                placeholder="Mobile Number*"
+                placeholder="Phone Number*"
                 className="w-full focus:outline-none px-2"
                 required
               />
@@ -79,18 +85,36 @@ const ContactModel = ({ setContactOpen }) => {
             />
 
             <div className="w-full flex items-center border-b border-gray-200 py-4">
-              <select name="" id="" className="focus:outline-none w-6/12 text-gray-600">
+              <select
+                name=""
+                id=""
+                className="focus:outline-none w-6/12 text-gray-600"
+              >
                 <option>Select Time</option>
                 <option value="10:00AM">10:00AM</option>
                 <option value="11:00AM">11:00AM</option>
                 <option value="12:00PM">12:00PM</option>
               </select>
-              <select name="" id="" className="focus:outline-none w-6/12 text-gray-600">
+              <select
+                name=""
+                id=""
+                className="focus:outline-none w-6/12 text-gray-600"
+              >
                 <option>Preferred Study Destination</option>
-                <option value="usa">USA</option>
+                <option value="uk">United Kingdom (exclusive focus)</option>
                 <option value="australia">Australia</option>
                 <option value="norway">Norway</option>
               </select>
+            </div>
+
+            <div className="mt-4 flex items-start  gap-2">
+              <input
+                type="checkbox"
+                className="border border-gray-200 w-5 h-5 focus:outline-none cursor-pointer"
+              />
+              <p className="text-gray-600 text-sm">
+                Keep me informed of scholarship news and special offers.
+              </p>
             </div>
             <div className="pt-2 flex items-start  gap-2">
               <input
@@ -98,13 +122,15 @@ const ContactModel = ({ setContactOpen }) => {
                 className="border border-gray-200 w-5 h-5 focus:outline-none cursor-pointer"
               />
               <p className="text-gray-600 text-sm">
-                Keep me informed of scholarship news and special offers. By
-                clicking submit.I agree to MOEC <Link className="text-blue-dark/95">Terms</Link> and{" "}
+                By clicking submit, I agree to Aladdin Group’s
+                <Link className="text-blue-dark/95">Terms</Link> and{" "}
                 <Link className="text-blue-dark/95">privacy policy</Link>
               </p>
             </div>
 
-            <button className="mt-6 bg-blue-dark text-[16px] font-medium font-poppins text-white py-3 px-5">Submit</button>
+            <button className="mt-6 bg-blue-dark text-[16px] font-medium font-poppins text-white py-3 px-5">
+              Submit
+            </button>
           </form>
         </div>
       </div>

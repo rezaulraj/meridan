@@ -4,16 +4,16 @@ import FaqsCard from "./FaqsCard";
 const FqsList = () => {
   const faqsList = [
     {
-      q: "Q1. Which country is best for artificial intelligence study?",
-      a: "There are various countries to study artificial intelligence courses, such as the United States of America (USA), Germany, Canada, and the United Kingdom (UK).",
+      q: "Q1. Which country is the top choice for AI studies?",
+      a: "Leading destinations include the UK, USA, Germany, and Canada, with the UK offering globally ranked AI programmes and industry-aligned curricula.",
     },
     {
-      q: "Q2. Which country pays the highest salary for AI?",
-      a: "AI engineers can mostly get the highest salary in the USA, Canada, and the United Kingdom.",
+      q: "Q2. Where do AI professionals earn the highest salaries?",
+      a: "Top-paying regions are the USA, Canada, and the UK, particularly for roles in machine learning, robotics, and data science.",
     },
     {
-      q: "Q3. Is learning artificial intelligence challenging?",
-      a: "Many students find it challenging to learn AI, especially those without a computer science or programming background. The work needed to understand it could be worth it",
+      q: "Q3. Is artificial intelligence difficult to learn?",
+      a: "AI requires strong analytical and programming skills, but structured education (e.g., UK university programmes) simplifies mastery through hands-on training and expert mentorship.",
     },
   ];
 

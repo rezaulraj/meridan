@@ -60,7 +60,7 @@ const ContactUs = () => {
             <li>
               <Link
                 to={"/"}
-                className="text-blue-dark font-medium font-poppins hover:text-blue-dark/80 hover:-translate-y-1 transition-transform duration-300 cursor-pointer"
+                className="text-gray-700 font-medium font-poppins hover:text-blue-dark hover:-translate-y-1 transition-transform duration-300 cursor-pointer"
               >
                 Home
               </Link>
@@ -68,7 +68,7 @@ const ContactUs = () => {
             <li>
               <Link
                 to={"/courses"}
-                className="text-blue-dark font-medium font-poppins hover:text-blue-dark/80 hover:translate-x-2 transition-transform"
+                className="text-gray-700 font-medium font-poppins hover:text-blue-dark hover:translate-x-2 transition-transform"
               >
                 Courses
               </Link>
@@ -76,7 +76,7 @@ const ContactUs = () => {
             <li>
               <Link
                 to={"/contact"}
-                className="text-blue-dark font-medium font-poppins hover:text-blue-dark/80 hover:translate-x-2 transition-transform"
+                className="text-gray-700 font-medium font-poppins hover:text-blue-dark hover:translate-x-2 transition-transform"
               >
                 Contact Us
               </Link>
@@ -86,7 +86,7 @@ const ContactUs = () => {
       </div>
       <div className="mt-8 pt-8 border-t border-gray-700 text-center">
         <p className=" text-gray-500 font-poppins font-medium text-sm">
-          © {new Date().getFullYear()} Aladdin Overseas. All rights reserved.
+          © {new Date().getFullYear()} Aladdin Group. All rights reserved.
         </p>
       </div>
     </div>
