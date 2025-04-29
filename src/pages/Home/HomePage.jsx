@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AI from "../../assets/11.jpg";
 import { FaArrowRight, FaCheck } from "react-icons/fa";
-import graduated from "../../assets/HomepageBenifite.jpg";
+import graduated from "../../assets/homepagebenifite.jpg";
 import shape from "../../assets/shape-28.png";
 const HomePage = () => {
   const lists = [
@@ -117,7 +117,9 @@ const HomePage = () => {
                   <h4 className="text-5xl text-blue-dark font-oswald font-bold">
                     {item.data}
                   </h4>
-                  <p className="mt-3 font-poppins text-lg font-medium">{item.title}</p>
+                  <p className="mt-3 font-poppins text-lg font-medium">
+                    {item.title}
+                  </p>
                 </li>
               ))}
             </ul>

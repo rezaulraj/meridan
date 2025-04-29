@@ -1,15 +1,17 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
+import { TbLoader } from "react-icons/tb";
 const ContactModel = ({ setContactOpen }) => {
+  const [submitRign, setSubmitRing] = useState(false);
   const form = useRef();
   const publicKey = "Nel0V-HszB2wBwurh";
   const serviceId = "service_9vkv2fk";
   const templeteId = "template_2sgg4pe";
   const sendEmail = (e) => {
     e.preventDefault();
-
+    setSubmitRing(true);
     emailjs
       .sendForm(serviceId, templeteId, form.current, {
         publicKey: publicKey,
@@ -19,10 +21,12 @@ const ContactModel = ({ setContactOpen }) => {
           console.log("SUCCESS!");
           toast.success("Thank You Sending Message.");
           setContactOpen(false);
+          setSubmitRing(false);
         },
         (error) => {
           console.log("FAILED...", error.text);
           toast.error("Sorry try again");
+          setSubmitRing(false);
         }
       );
   };
@@ -158,11 +162,16 @@ const ContactModel = ({ setContactOpen }) => {
               </p>
             </div>
 
-            <input
+            <button
               type="submit"
-              value="Send"
-              className="mt-6 bg-blue-dark text-[16px] font-medium font-poppins text-white py-3 px-5"
-            />
+              className="mt-6 bg-blue-dark text-[16px] cursor-pointer shadow font-medium font-poppins text-white py-3 px-5"
+            >
+              {submitRign ? (
+                <TbLoader className="animate-spin w-4 h-4" />
+              ) : (
+                "Submit"
+              )}
+            </button>
           </form>
         </div>
       </div>

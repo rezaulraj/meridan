@@ -3,7 +3,7 @@ import { FaMailchimp, FaPhoneVolume } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { MdArrowForwardIos } from "react-icons/md";
 import { Link } from "react-router-dom";
-import topImage from "../../assets/LondonBridge.jpg";
+import topImage from "../../assets/londonbridge.jpg";
 import img1 from "../../assets/contact/dubai.webp";
 import img2 from "../../assets/contact/pune.webp";
 import img3 from "../../assets/contact/lucknow.webp";

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/Aladdin-Group.png";
+import logo from "../../assets/aladdin-group.png";
 import {
   FaFacebook,
   FaInstagram,

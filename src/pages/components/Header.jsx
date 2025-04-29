@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../assets/Aladdin-Group.png";
+import Logo from "../../assets/aladdin-group.png";
 import { Link } from "react-router-dom";
 import SearchModel from "./models/SearchModel";
 import { FaArrowRight, FaTimes, FaUser } from "react-icons/fa";
