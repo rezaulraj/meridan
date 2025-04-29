@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import AI from "../../assets/11.jpg";
-import { FaArrowRight, FaCheck } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import graduated from "../../assets/homepagebenifite.jpg";
 import shape from "../../assets/shape-28.png";
 const HomePage = () => {

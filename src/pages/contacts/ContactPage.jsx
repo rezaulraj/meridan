@@ -1,5 +1,5 @@
 import React from "react";
-import { FaMailchimp, FaPhoneVolume } from "react-icons/fa6";
+import { FaPhoneVolume } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { MdArrowForwardIos } from "react-icons/md";
 import { Link } from "react-router-dom";
