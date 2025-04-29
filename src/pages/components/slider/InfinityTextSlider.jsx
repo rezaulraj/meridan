@@ -7,19 +7,15 @@ const InfinityTextSlider = () => {
   const [contactOpen, setContactOpen] = useState(false);
   const slides = [
     {
-      text: "Final Deadline Alert! UK September 2025 Intake for Artificial Intelligence :",
+      text: "Final Deadline Alert! UK September 2025 Intake for Artificial Intelligence : ",
       button: "Apply Now!",
     },
     {
-      text: "Russell Group Universities Open! Secure Your Spot for AI Degrees - Limited Scholarships Available :",
-      button: "Apply Now!",
+      text: "UK Student Visa Update: New Immigration Rules Simplified: ",
+      button: "Book Free Advice Session!",
     },
     {
-      text: "UK Student Visa Update: New Immigration Rules Simplified:",
-      button: "Apply Now!",
-    },
-    {
-      text: "Last 10 Seats Remaining! Top UK Universities for Machine Learning & AI:",
+      text: "Last 10 Seats Remaining! Top UK Universities for Machine Learning & AI: ",
       button: "Apply Now!",
     },
   ];

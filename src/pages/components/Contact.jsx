@@ -1,13 +1,14 @@
 import React from "react";
-import contact from "../../assets/ai/contact-img.webp";
+import contact from "../../assets/BookYourOnlineCounsellingSession.jpg";
 import { Link } from "react-router-dom";
 const Contact = () => {
   return (
     <div
-      className="bg-cover bg-center py-16  px-2"
+      className="bg-cover py-16 px-2 relative"
       style={{ backgroundImage: `url(${contact})` }}
     >
-      <div className="max-w-screen-lg mx-auto overflow-hidden">
+      <div className="absolute inset-0 bg-gray-700/40"></div>
+      <div className="max-w-screen-lg mx-auto overflow-hidden relative z-50">
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
           <h1 className="col-span-5 text-3xl text-center md:text-5xl text-white font-bold font-oswald tracking-wider md:leading-20">
             Book Your Online Counselling Session
@@ -80,9 +81,9 @@ const Contact = () => {
                   className="focus:outline-none w-full text-gray-600"
                 >
                   <option>Ideal Start Date*</option>
-                  <option value="jan-2025">Jan 2025</option>
-                  <option value="sept-2025">Sept 2025</option>
-                  <option value="jan-2026">Jan 2026</option>
+                  <option value="jan-2025">Jan 2026</option>
+                  <option value="sept-2025">Sept 2026</option>
+                  <option value="jan-2026">Jan 2027</option>
                 </select>
               </div>
               <div className="pt-2 flex items-start  gap-2">

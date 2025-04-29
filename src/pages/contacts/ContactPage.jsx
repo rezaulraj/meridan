@@ -3,7 +3,7 @@ import { FaMailchimp, FaPhoneVolume } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { MdArrowForwardIos } from "react-icons/md";
 import { Link } from "react-router-dom";
-import topImage from "../../assets/contact/hawa-mahal.webp";
+import topImage from "../../assets/LondonBridge.jpg";
 import img1 from "../../assets/contact/dubai.webp";
 import img2 from "../../assets/contact/pune.webp";
 import img3 from "../../assets/contact/lucknow.webp";
@@ -124,7 +124,7 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="bg-blue-seondary">
+    <div className="bg-white">
       <div className="max-w-screen-lg mx-auto py-10 space-y-3 px-2">
         {/* link */}
         <div className="flex items-center gap-4">
@@ -182,7 +182,8 @@ const ContactPage = () => {
               your needs.
             </li>
             <li className="font-poppins text-lg text-gray-800">
-            <span className="text-blue-dark pr-2">✔</span><span className="pr-2 font-semibold text-gray-700">
+              <span className="text-blue-dark pr-2">✔</span>
+              <span className="pr-2 font-semibold text-gray-700">
                 UK-Focused Expertise:
               </span>
               Specialising in AI courses at leading UK universities, we ensure
@@ -209,14 +210,19 @@ const ContactPage = () => {
             <span className="flex items-center gap-2">
               <IoMail />
 
-              <a href="">application02@meridean.org</a>
+              <a href="mailto:contact@aladdingroup.online">
+                contact@aladdingroup.online
+              </a>
             </span>
           </span>
         </div>
         {/* location */}
         <div className="mt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6">
-            <img src={topImage} alt="" />
+            <div className="relative">
+              <img src={topImage} alt="" />
+              <div className="absolute inset-0 bg-white/20"></div>
+            </div>
 
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.5493329776236!2d0.1112662766220392!3d51.539825271820774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a5c1178c22d3%3A0x313e56236536d8b9!2s23%20Basedale%20Rd%2C%20Dagenham%20RM9%204QA%2C%20UK!5e0!3m2!1sen!2sbd!4v1745900339770!5m2!1sen!2sbd"

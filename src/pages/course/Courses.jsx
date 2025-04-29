@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import AI from "../../assets/ai/aifront.png";
+import AI from "../../assets/CoursePage.png";
 import FqsList from "../components/FqsList";
 const Courses = () => {
   const homeData = [
@@ -28,7 +28,7 @@ const Courses = () => {
       link: "#list",
     },
     {
-      title: "Artificial Intelligence Course Fees and Living Costs in Abroad",
+      title: "Artificial Intelligence Course Fees and Living Costs in UK",
       link: "#living",
     },
     {
@@ -282,11 +282,11 @@ const Courses = () => {
   }
 
   return (
-    <div className="max-w-screen-xl mx-auto">
-      <section>
+    <div className="bg-blue-seondary">
+      <section className="max-w-screen-xl mx-auto">
         <div className="flex flex-col md:flex-row gap-4 mb-6">
           {/* Main Content (left side) */}
-          <div className="hidden w-72 flex-shrink-0 md:block space-y-3 bg-white text-gray-800">
+          <div className="hidden w-72 flex-shrink-0 md:block space-y-3 bg-blue-seondary text-gray-800">
             <div className="sticky top-4">
               <ul className="border border-gray-300 divide-y divide-gray-300 shadow-md">
                 {homeData.map((data, indx) => {
@@ -335,7 +335,14 @@ const Courses = () => {
               <h1 className="text-2xl md:text-4xl font-bold text-blue-dark font-poppins">
                 International Artificial Intelligence Education Programs
               </h1>
-              <img src={AI} alt="" />
+              <div className="relative">
+                <img
+                  src={AI}
+                  alt="Artificial Intelligence Program"
+                  className="size-full object-cover"
+                />
+                <div className="absolute inset-0 bg-white/5"></div>
+              </div>
               {/* part one */}
               <div id="overview">
                 <h1 className="text-blue-dark text-xl md:text-3xl font-bold font-poppins">
@@ -698,7 +705,7 @@ const Courses = () => {
                   id="living"
                   className="text-blue-dark text-xl md:text-3xl font-bold font-poppins"
                 >
-                  Artificial Intelligence Course Fees and Living Costs in Abroad
+                  Artificial Intelligence Course Fees and Living Costs in UK
                 </h1>
                 <div className="w-40 h-1 mt-2 bg-red-primary" />
               </div>

@@ -49,10 +49,13 @@ const ContactUs = () => {
             <RiWhatsappFill />
             <p className="font-poppins">WhatsApp: +44 7943 642473</p>
           </Link>
-          <Link className="flex items-center gap-2 hover:text-blue-400 text-gray-700 font-poppins transition-colors duration-200 cursor-pointer">
-            <IoMail className=" " />
-            <p className="font-poppins">admissions@aladdingroup.co.uk</p>
-          </Link>
+          <a
+            href="mailto:contact@aladdingroup.online"
+            className="flex items-center gap-2 hover:text-blue-400 text-gray-700 font-poppins transition-colors duration-200"
+          >
+            <IoMail />
+            contact@aladdingroup.online
+          </a>
         </div>
         <div className="col-span-1 flex flex-col gap-3 p-2">
           <h2 className="text-xl font-medium font-poppins">Manu</h2>

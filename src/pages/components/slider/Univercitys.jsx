@@ -37,7 +37,7 @@ const Univercitys = () => {
     // { id: 12, img: img12 },
   ];
   return (
-    <div className="bg-white">
+    <div className="bg-white/80">
       <div className="relative px-4 py-12 max-w-screen-xl mx-auto">
         <Swiper
           ref={swiperRef}

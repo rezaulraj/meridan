@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AI from "../../assets/11.jpg";
 import { FaArrowRight, FaCheck } from "react-icons/fa";
-import graduated from "../../assets/university.png";
+import graduated from "../../assets/HomepageBenifite.jpg";
 import shape from "../../assets/shape-28.png";
 const HomePage = () => {
   const lists = [
@@ -26,10 +26,6 @@ const HomePage = () => {
     {
       data: "98%",
       title: "UK Visa Approval Rate for AI Students",
-    },
-    {
-      data: "200+",
-      title: "Annual Placements in Russell Group AI Programs",
     },
     {
       data: "85%",
@@ -67,7 +63,10 @@ const HomePage = () => {
       </div>
       <div className="max-w-screen-xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 my-16 gap-8">
-          <img src={graduated} alt="" />
+          <div className="relative">
+            <img src={graduated} alt="" className="p-2" />
+            <div className="absolute inset-0 bg-white/20"></div>
+          </div>
           <div className="space-y-6 p-2">
             <h2 className="text-4xl font-bold font-poppins text-blue-dark">
               Your Pathway to Premier AI Education in the UK
@@ -106,7 +105,7 @@ const HomePage = () => {
             </h3>
           </div>
           <div className="mt-12">
-            <ul className="grid grid-cols-2 md:grid-cols-4 items-center justify-center gap-y-10 ">
+            <ul className="grid grid-cols-2 md:grid-cols-3 items-center justify-center gap-y-10 ">
               {stats.map((item, idx) => (
                 <li key={idx} className="text-center px-12 md:px-16">
                   <h4 className="text-5xl text-blue-dark font-oswald font-bold">
