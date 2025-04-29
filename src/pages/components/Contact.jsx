@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useRef } from "react";
 import contact from "../../assets/BookYourOnlineCounsellingSession.jpg";
 import { Link } from "react-router-dom";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 const Contact = () => {
+  const form = useRef();
+  const publicKey = "Nel0V-HszB2wBwurh";
+  const serviceId = "service_9vkv2fk";
+  const templeteId = "template_2sgg4pe";
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(serviceId, templeteId, form.current, {
+        publicKey: publicKey,
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          toast.success("Thank You Sending Message.");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          toast.error("Sorry try again");
+        }
+      );
+  };
   return (
     <div
       id="consultation"
@@ -15,28 +39,35 @@ const Contact = () => {
             Book Your Online Counselling Session
           </h1>
           <div className="col-span-7">
-            <form className="py-4 px-4 bg-white space-y-2">
+            <form
+              className="py-4 px-4 bg-white space-y-2"
+              ref={form}
+              onSubmit={sendEmail}
+            >
               <label htmlFor="name" className="sr-only">
                 Name
               </label>
               <input
                 type="text"
+                name="user_name"
                 placeholder="Full Name*"
                 className="w-full border-b focus:outline-none border-gray-200 py-4"
                 required
               />
               <div className="w-full flex items-center border-b border-gray-200 py-4">
                 <select
-                  name=""
+                  name="country_code"
                   id=""
                   className="focus:outline-none w-20 text-gray-600"
                 >
+                  <option>Country Code*</option>
                   <option value="+88">+88</option>
                   <option value="+66">+66</option>
                   <option value="+22">+22</option>
                 </select>
                 <input
                   type="number"
+                  name="phone_number"
                   placeholder="WhatsApp Number (with country code)*"
                   className="w-full focus:outline-none px-2"
                   required
@@ -47,11 +78,12 @@ const Contact = () => {
                 type="email"
                 placeholder="Email*"
                 required
+                name="{{user_email}}"
                 className="w-full border-b focus:outline-none border-gray-200 py-4"
               />
               <div className="w-full flex items-center border-b border-gray-200 py-4">
                 <select
-                  name=""
+                  name="city_state"
                   id=""
                   className="focus:outline-none w-full text-gray-600"
                 >
@@ -63,7 +95,7 @@ const Contact = () => {
               </div>
               <div className="w-full flex items-center border-b border-gray-200 py-4">
                 <select
-                  name=""
+                  name="study_destination"
                   id=""
                   className="focus:outline-none w-full text-gray-600"
                 >
@@ -77,7 +109,7 @@ const Contact = () => {
               </div>
               <div className="w-full flex items-center border-b border-gray-200 py-4">
                 <select
-                  name=""
+                  name="preferred_time"
                   id=""
                   className="focus:outline-none w-full text-gray-600"
                 >

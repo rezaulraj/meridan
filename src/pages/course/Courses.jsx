@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import AI from "../../assets/CoursePage.png";
+import AI from "../../assets/Ai.png";
 import FqsList from "../components/FqsList";
 const Courses = () => {
   const homeData = [
@@ -339,9 +339,9 @@ const Courses = () => {
                 <img
                   src={AI}
                   alt="Artificial Intelligence Program"
-                  className="size-full object-cover"
+                  className="w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-white/5"></div>
+                {/* <div className="absolute inset-0 bg-white/2"></div> */}
               </div>
               {/* part one */}
               <div id="overview">

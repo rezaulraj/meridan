@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 const ContactModel = ({ setContactOpen }) => {
+  const form = useRef();
+  const publicKey = "Nel0V-HszB2wBwurh";
+  const serviceId = "service_9vkv2fk";
+  const templeteId = "template_2sgg4pe";
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(serviceId, templeteId, form.current, {
+        publicKey: publicKey,
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          toast.success("Thank You Sending Message.");
+          setContactOpen(false);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          toast.error("Sorry try again");
+        }
+      );
+  };
   return (
     <div
       className="fixed inset-0 z-50 bg-black/50 font-poppins"
@@ -42,19 +66,20 @@ const ContactModel = ({ setContactOpen }) => {
             </button>
           </div>
 
-          <form className="py-4 px-2">
+          <form className="py-4 px-2" ref={form} onSubmit={sendEmail}>
             <label htmlFor="name" className="sr-only">
               Name
             </label>
             <input
               type="text"
               placeholder="Name*"
+              name="user_name"
               className="w-full border-b focus:outline-none border-gray-200 py-4"
               required
             />
             <div className="w-full flex items-center border-b border-gray-200 py-4">
               <select
-                name=""
+                name="country_code"
                 id=""
                 className="focus:outline-none w-42 text-gray-600"
               >
@@ -69,24 +94,27 @@ const ContactModel = ({ setContactOpen }) => {
                 placeholder="Phone Number*"
                 className="w-full focus:outline-none px-2"
                 required
+                name="phone_number"
               />
             </div>
             <input
               type="email"
               placeholder="Email Address*"
               required
+              name="user_email"
               className="w-full border-b focus:outline-none border-gray-200 py-4"
             />
             <input
-              type="email"
+              type="text"
               placeholder="State,City*"
               required
+              name="city_state"
               className="w-full border-b focus:outline-none border-gray-200 py-4"
             />
 
             <div className="w-full flex items-center border-b border-gray-200 py-4">
               <select
-                name=""
+                name="preferred_time"
                 id=""
                 className="focus:outline-none w-6/12 text-gray-600"
               >
@@ -96,12 +124,14 @@ const ContactModel = ({ setContactOpen }) => {
                 <option value="12:00PM">12:00PM</option>
               </select>
               <select
-                name=""
+                name="study_destination"
                 id=""
                 className="focus:outline-none w-6/12 text-gray-600"
               >
                 <option>Preferred Study Destination</option>
-                <option value="uk">United Kingdom (exclusive focus)</option>
+                <option value="United Kingdom (exclusive focus)">
+                  United Kingdom (exclusive focus)
+                </option>
                 <option value="australia">Australia</option>
                 <option value="norway">Norway</option>
               </select>
@@ -128,9 +158,11 @@ const ContactModel = ({ setContactOpen }) => {
               </p>
             </div>
 
-            <button className="mt-6 bg-blue-dark text-[16px] font-medium font-poppins text-white py-3 px-5">
-              Submit
-            </button>
+            <input
+              type="submit"
+              value="Send"
+              className="mt-6 bg-blue-dark text-[16px] font-medium font-poppins text-white py-3 px-5"
+            />
           </form>
         </div>
       </div>

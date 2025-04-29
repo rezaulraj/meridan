@@ -6,6 +6,7 @@ import { FloatingWhatsApp } from "react-floating-whatsapp";
 import ContactPage from "./pages/contacts/ContactPage";
 import ScrollToTop from "./pages/components/ScrollToTop";
 import Courses from "./pages/course/Courses";
+import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <div className="relative">
@@ -20,6 +21,7 @@ function App() {
       <div className="relative">
         <FloatingWhatsApp className="absolute bottom-5 left-0" />
       </div>
+      <Toaster />
     </div>
   );
 }
