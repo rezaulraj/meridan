@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Logo from "../../assets/aladdin-group.png";
+import Logo from "../../assets/aladdin.png";
 import { Link } from "react-router-dom";
-import SearchModel from "./models/SearchModel";
+// import SearchModel from "./models/SearchModel";
 import { FaArrowRight, FaTimes, FaUser } from "react-icons/fa";
-import { IoSearch } from "react-icons/io5";
+// import { IoSearch } from "react-icons/io5";
 import { MdOutlineArrowDropDown } from "react-icons/md";
-import instution from "../../assets/instution2.png";
-import student from "../../assets/studenticon2.png";
+// import instution from "../../assets/instution2.png";
+// import student from "../../assets/studenticon2.png";
 import ContactModel from "./models/ContactModel";
 import InfinityTextSlider from "./slider/InfinityTextSlider";
 const Header = () => {
