@@ -4,124 +4,124 @@ import { IoMail } from "react-icons/io5";
 import { MdArrowForwardIos } from "react-icons/md";
 import { Link } from "react-router-dom";
 import topImage from "../../assets/londonbridge.jpg";
-import img1 from "../../assets/contact/dubai.webp";
-import img2 from "../../assets/contact/pune.webp";
-import img3 from "../../assets/contact/lucknow.webp";
-import img4 from "../../assets/contact/hyderabad.webp";
-import img5 from "../../assets/contact/noida.webp";
-import img6 from "../../assets/contact/delhi.webp";
-import img7 from "../../assets/contact/agra.webp";
-import img8 from "../../assets/contact/aurangabad.webp";
-import img9 from "../../assets/contact/mumbai.webp";
-import img10 from "../../assets/contact/indore-ofc.webp";
-import img11 from "../../assets/contact/ahmedabad-ofc.webp";
+// import img1 from "../../assets/contact/dubai.webp";
+// import img2 from "../../assets/contact/pune.webp";
+// import img3 from "../../assets/contact/lucknow.webp";
+// import img4 from "../../assets/contact/hyderabad.webp";
+// import img5 from "../../assets/contact/noida.webp";
+// import img6 from "../../assets/contact/delhi.webp";
+// import img7 from "../../assets/contact/agra.webp";
+// import img8 from "../../assets/contact/aurangabad.webp";
+// import img9 from "../../assets/contact/mumbai.webp";
+// import img10 from "../../assets/contact/indore-ofc.webp";
+// import img11 from "../../assets/contact/ahmedabad-ofc.webp";
 import ContactCard from "./ContactCard";
 import { RiWhatsappFill } from "react-icons/ri";
 const ContactPage = () => {
-  const contactdata = [
-    {
-      office: "Meridean Overseas - Dubai",
-      subTitle:
-        "Office Number 307, 3rd Floor, Millennium Central Downtown, Al Asayel St - Business Bay - Dubai",
-      phone: "+97 1507 167 689",
-      location: "location",
-      img: img1,
-    },
-    {
-      office: "Meridean Overseas - Pune",
-      subTitle:
-        "302, Dnyanshobha, Plot no 48, Opp kurtkoti nursing home Bhusari colony, Kothrud, Pune - 411038",
-      phone: "1800123000011",
-      phone2: "077588 20670",
-      location: "location",
-      img: img2,
-    },
-    {
-      office: "Meridean Overseas - Lucknow",
-      subTitle:
-        "Shop no. 1 Sana palace 1 Ground Floor Shahnajaf Rd, opposite to Saharaganj Mall, Prem Nagar, Hazratganj Lucknow, Uttar Pradesh, 226001",
-      phone: "1800123000011",
-      phone2: "083036 94977",
-      location: "location",
-      img: img3,
-    },
+  // const contactdata = [
+  //   {
+  //     office: "Meridean Overseas - Dubai",
+  //     subTitle:
+  //       "Office Number 307, 3rd Floor, Millennium Central Downtown, Al Asayel St - Business Bay - Dubai",
+  //     phone: "+97 1507 167 689",
+  //     location: "location",
+  //     img: img1,
+  //   },
+  //   {
+  //     office: "Meridean Overseas - Pune",
+  //     subTitle:
+  //       "302, Dnyanshobha, Plot no 48, Opp kurtkoti nursing home Bhusari colony, Kothrud, Pune - 411038",
+  //     phone: "1800123000011",
+  //     phone2: "077588 20670",
+  //     location: "location",
+  //     img: img2,
+  //   },
+  //   {
+  //     office: "Meridean Overseas - Lucknow",
+  //     subTitle:
+  //       "Shop no. 1 Sana palace 1 Ground Floor Shahnajaf Rd, opposite to Saharaganj Mall, Prem Nagar, Hazratganj Lucknow, Uttar Pradesh, 226001",
+  //     phone: "1800123000011",
+  //     phone2: "083036 94977",
+  //     location: "location",
+  //     img: img3,
+  //   },
 
-    {
-      office: "Meridean Overseas - Hyderabad",
-      subTitle:
-        "Door No. 6-3-1093, Space No. 401, 4th Floor V.V. Vintage Boulevard Raj Bhavan Road, Hyderabad - 500082",
-      phone: "1800123000011",
-      phone2: "081717 81701",
-      location: "location",
-      img: img4,
-    },
-    {
-      office: "Meridean Overseas - Noida",
-      subTitle:
-        "503 & 504 on 5th floor Ocean heights K-4, Sector 18, Noida Uttar Pradesh 201301",
-      phone: "1800123000011",
-      phone2: "089059 98503",
-      location: "location",
-      img: img5,
-    },
-    {
-      office: "Meridean Overseas - Delhi",
-      subTitle:
-        "3rd floor, 20, Najafgarh Rd, Block A, Raja Garden Delhi, 110015, India",
-      phone: "1800123000011",
-      phone2: "097733 93836",
-      location: "location",
-      img: img6,
-    },
-    {
-      office: "Meridean Overseas - Agra",
-      subTitle:
-        "6/2/1 Second Floor, Awagarh House, Mahatma Gandhi Rd, Opp. Anjna Cinema, Agra, Uttar Pradesh. 282002",
-      phone: "1800123000011",
-      phone2: "070609 78882",
-      location: "location",
-      img: img7,
-    },
-    {
-      office: "Meridean Overseas - Aurangabad",
-      subTitle:
-        "Sai Aspire, Office no. 401/402, 4th floor, Opp. Shri Guru Tegh Bahadur English High School, Near Sant Eknath Rang Mandir, New Usmanpura, Chhatrapati Sambhaji Nagar, Maharashtra 431005",
-      phone: "1800123000011",
-      phone2: "097733 41357",
-      location: "location",
-      img: img8,
-    },
-    {
-      office: "Meridean Overseas - Mumbai",
-      subTitle:
-        "A109, meridean overseas education consultants, Everson chs, 1st floor, D.n. nagar metro station,l junction, Andheri west Mumbai 400058",
-      landmark: "Landmark : Next to h.p. petrol station",
-      phone: "1800123000011",
-      phone2: "97733 90927",
-      location: "location",
-      img: img9,
-    },
-    {
-      office: "Meridean Overseas - Indore",
-      subTitle:
-        "Office no. 203, Second floor, The Heritage, 582, Mahatma Gandhi Rd, opposite hukumchand ghantaghar, New Palasia, Indore, Madhya Pradesh 452001",
+  //   {
+  //     office: "Meridean Overseas - Hyderabad",
+  //     subTitle:
+  //       "Door No. 6-3-1093, Space No. 401, 4th Floor V.V. Vintage Boulevard Raj Bhavan Road, Hyderabad - 500082",
+  //     phone: "1800123000011",
+  //     phone2: "081717 81701",
+  //     location: "location",
+  //     img: img4,
+  //   },
+  //   {
+  //     office: "Meridean Overseas - Noida",
+  //     subTitle:
+  //       "503 & 504 on 5th floor Ocean heights K-4, Sector 18, Noida Uttar Pradesh 201301",
+  //     phone: "1800123000011",
+  //     phone2: "089059 98503",
+  //     location: "location",
+  //     img: img5,
+  //   },
+  //   {
+  //     office: "Meridean Overseas - Delhi",
+  //     subTitle:
+  //       "3rd floor, 20, Najafgarh Rd, Block A, Raja Garden Delhi, 110015, India",
+  //     phone: "1800123000011",
+  //     phone2: "097733 93836",
+  //     location: "location",
+  //     img: img6,
+  //   },
+  //   {
+  //     office: "Meridean Overseas - Agra",
+  //     subTitle:
+  //       "6/2/1 Second Floor, Awagarh House, Mahatma Gandhi Rd, Opp. Anjna Cinema, Agra, Uttar Pradesh. 282002",
+  //     phone: "1800123000011",
+  //     phone2: "070609 78882",
+  //     location: "location",
+  //     img: img7,
+  //   },
+  //   {
+  //     office: "Meridean Overseas - Aurangabad",
+  //     subTitle:
+  //       "Sai Aspire, Office no. 401/402, 4th floor, Opp. Shri Guru Tegh Bahadur English High School, Near Sant Eknath Rang Mandir, New Usmanpura, Chhatrapati Sambhaji Nagar, Maharashtra 431005",
+  //     phone: "1800123000011",
+  //     phone2: "097733 41357",
+  //     location: "location",
+  //     img: img8,
+  //   },
+  //   {
+  //     office: "Meridean Overseas - Mumbai",
+  //     subTitle:
+  //       "A109, meridean overseas education consultants, Everson chs, 1st floor, D.n. nagar metro station,l junction, Andheri west Mumbai 400058",
+  //     landmark: "Landmark : Next to h.p. petrol station",
+  //     phone: "1800123000011",
+  //     phone2: "97733 90927",
+  //     location: "location",
+  //     img: img9,
+  //   },
+  //   {
+  //     office: "Meridean Overseas - Indore",
+  //     subTitle:
+  //       "Office no. 203, Second floor, The Heritage, 582, Mahatma Gandhi Rd, opposite hukumchand ghantaghar, New Palasia, Indore, Madhya Pradesh 452001",
 
-      phone: "1800123000011",
-      phone2: "083069 92194",
-      location: "location",
-      img: img10,
-    },
-    {
-      office: "Meridean Overseas - Ahmedabad",
-      subTitle:
-        "Office No. 303, 3rd Floor, ATP Arcade Building Nr. National Handloom, Law Garden, Navrangpura, Ahmedabad, Gujrat, 380009",
+  //     phone: "1800123000011",
+  //     phone2: "083069 92194",
+  //     location: "location",
+  //     img: img10,
+  //   },
+  //   {
+  //     office: "Meridean Overseas - Ahmedabad",
+  //     subTitle:
+  //       "Office No. 303, 3rd Floor, ATP Arcade Building Nr. National Handloom, Law Garden, Navrangpura, Ahmedabad, Gujrat, 380009",
 
-      phone: "1800123000011",
-      phone2: "097733 59609",
-      location: "location",
-      img: img11,
-    },
-  ];
+  //     phone: "1800123000011",
+  //     phone2: "097733 59609",
+  //     location: "location",
+  //     img: img11,
+  //   },
+  // ];
 
   return (
     <div className="bg-white">
