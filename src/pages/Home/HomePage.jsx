@@ -1,7 +1,7 @@
 import React from "react";
 import AI from "../../assets/11.jpg";
 import { FaArrowRight } from "react-icons/fa";
-import graduated from "../../assets/homepagebenifite.jpg";
+import graduated from "../../assets/homepageBenefit.jpg";
 import shape from "../../assets/shape-28.png";
 const HomePage = () => {
   const lists = [
