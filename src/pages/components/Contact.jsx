@@ -78,7 +78,7 @@ const Contact = () => {
                 type="email"
                 placeholder="Email*"
                 required
-                name="{{user_email}}"
+                name="user_email"
                 className="w-full border-b focus:outline-none border-gray-200 py-4"
               />
               <div className="w-full flex items-center border-b border-gray-200 py-4">
